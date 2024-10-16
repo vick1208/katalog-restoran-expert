@@ -1,0 +1,27 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+html,body{
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  font-family: "Lato",sans-serif;
+  font-size: 1rem;
+  color: #94a3b8;
+}
+
+/* 
+ * Header 
+ *
+ */
+.header{
+  min-height: 3em;
+}
+img {
+  display: block;
+}
