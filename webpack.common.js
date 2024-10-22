@@ -14,16 +14,33 @@ module.exports = {
   },
   module: {
     rules: [
+      // jika memakai css
+      // {
+      //   test: /\.css$/,
+      //   use: [
+      //     {
+      //       loader: 'style-loader',
+      //     },
+      //     {
+      //       loader: 'css-loader',
+      //     },
+      //   ],
+      // },
+      // jika memakai scss
       {
-        test: /\.css$/,
+        test: /\.s[ac]ss$/i,
         use: [
           {
-            loader: 'style-loader',
+            loader: 'style-loader'
           },
           {
-            loader: 'css-loader',
+            loader: 'css-loader'
           },
-        ],
+          {
+            loader: 'sass-loader'
+          },
+        ]
+
       },
     ],
   },
@@ -39,6 +56,9 @@ module.exports = {
         {
           from: path.resolve(__dirname, 'src/public/'),
           to: path.resolve(__dirname, 'dist/'),
+          globOptions:{
+            ignore:['**/public/images/heros/hero-image_1.jpg'],
+          }
         },
       ],
     }),
