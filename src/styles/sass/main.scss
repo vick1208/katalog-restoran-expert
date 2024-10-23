@@ -1,4 +1,5 @@
 $snow: #fffafa;
+$slate-400: #94a3b8;
 
 
 * {
@@ -21,13 +22,13 @@ body {
 
 .header__container {
   display: flex;
-  background-color: #94a3b8;
+  background-color: $slate-400;
   min-height: 3rem;
   width: 100%;
   padding: 1rem;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 3px solid #94a3b8;
+  border-bottom: 3px solid $slate-400;
 
   p {
     font-family: "Playfair Display", serif;
@@ -65,7 +66,7 @@ body {
   background: linear-gradient(rgba(1, 1, 1, 0.8), rgba(0, 2, 0, 0.2)),
     url("../../public/images/heros/hero-image_1.jpg");
   min-width: 62.5rem;
-  height: 28.125rem;
+  height: 21.125rem;
   background-size: cover;
   align-items: center;
 }
@@ -82,7 +83,7 @@ body {
 }
 
 footer {
-  background-color: #94a3b8;
+  background-color: $slate-400;
   padding: 2rem;
   width: 100%;
 }
