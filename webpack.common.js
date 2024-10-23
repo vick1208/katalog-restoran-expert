@@ -26,7 +26,7 @@ module.exports = {
       //     },
       //   ],
       // },
-      // jika memakai scss
+      // jika memakai scss/sass
       {
         test: /\.s[ac]ss$/i,
         use: [

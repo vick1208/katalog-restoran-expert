@@ -1,11 +1,8 @@
 import 'regenerator-runtime'; /* for async await transpile */
-// sementara pakai css vanilla
-// import '../styles/main.css';
-
-// jika pakai scss
-import '../styles/sass/main.scss'
+// import file scss
+import '../sass/main.scss'
 
 
-console.log("Test 1");
+console.log("OK");
 
 
