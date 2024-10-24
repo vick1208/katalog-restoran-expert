@@ -62,8 +62,8 @@ body {
     color: #fffafa;
     text-align: center;
 }
-.hero__inner h2 {
-    text-transform: capitalize;
+.hero__inner h1 {
+
     font-size: 3.2rem;
 }
 
