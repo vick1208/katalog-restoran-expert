@@ -44,26 +44,6 @@
     #itemPicture {
         max-height: 100%;
     }
-
-    footer {
-        font-size: 12px;
-    }
-
-    .hero__title {
-        font-size: 38px;
-    }
-
-    .hero__tag {
-        font-size: 22px;
-        margin: 20px;
-    }
-
-    .mainContent {
-        font-size: 12px;
-    }
-}
-
-@media screen and (min-width: 600px) {
     footer {
         font-size: 13px;
     }
@@ -109,7 +89,7 @@
 }
 
 @media (max-width: 768px) {
-    #humberger-menu {
+    #hamburger-menu {
         display: inline-flex;
         align-items: center;
         justify-content: flex-end;
@@ -143,8 +123,8 @@
         width: 100%;
     }
 
-    #humberger-menu {
-        font-size: 32px;
+    #hamburger-menu {
+        font-size: 2rem;
         text-decoration: none;
         color: black;
         margin-right: 1rem;

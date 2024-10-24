@@ -58,7 +58,7 @@ body {
     text-transform: capitalize;
 }
 
-.header__container p a {
+.header__container p .nav__logo {
     color: #fffafa;
     text-decoration: none;
 }
@@ -140,7 +140,7 @@ body {
     width: 100%;
     align-items: center;
     font-size: 18px;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 5);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 .itemRating {
@@ -152,7 +152,7 @@ body {
     font-size: 18px;
     height: 45px;
     padding: 4px;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    text-shadow: 2px 2px 16px rgba(0, 0, 0, 0.8);
 }
 
 p.itemRating {

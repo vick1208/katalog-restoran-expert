@@ -9,8 +9,13 @@ import '../styles/media.css'
 
 console.log("OK");
 
-let module = await import('../public/data/DATA.json')
-const content = module.restaurants;
+const yearElement = document.getElementById('year')
+let date = new Date();
+
+yearElement.innerText = date.getFullYear();
+
+let data = await import('../public/data/DATA.json')
+const content = data.restaurants;
 console.log(content);
 
 let listContent = ``;
