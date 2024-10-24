@@ -14,24 +14,25 @@ let date = new Date();
 
 yearElement.innerText = date.getFullYear();
 
-let data = await import('../public/data/DATA.json')
-const content = data.restaurants;
-console.log(content);
+let obj = await import('../public/data/DATA.json');
+const content = obj.default;
+const data = content.restaurants;
+console.log(data);
 
 let listContent = ``;
-content.forEach(function (data) {
+data.forEach(function (item) {
     listContent += `
         <div class="item">
             <div>
-                <img class="itemPicture" src="${data.pictureId}" alt="${data.name}" title="${data.name}">
+                <img class="itemPicture" src="${item.pictureId}" alt="${item.name}" title="${item.name}">
             </div>
-            <p class="itemCity">${data.city}</p>
+            <p class="itemCity">${item.city}</p>
             <div class="itemDesc">
-                <h1><a href="#">${data.name}</a></h1>
+                <h1><a href="#">${item.name}</a></h1>
                 <div>
-                    <p>${data.description.slice(0, 150)}...</p>
+                    <p>${item.description.slice(0, 150)}...</p>
                 </div>
-                <p class="itemRating">Rating: <a href="#" class="link__rating">${data.rating} &#x2B50;</a></p>
+                <p class="itemRating">Rating: <a href="#" class="link__rating">${item.rating} &#x2B50;</a></p>
             </div>
         </div>`
 })
