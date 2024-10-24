@@ -1,6 +1,6 @@
 import 'regenerator-runtime'; /* for async await transpile */
-// import file scss
-import '../styles/main.scss'
+// import file css
+import '../styles/main.css'
 
 
 console.log("OK");

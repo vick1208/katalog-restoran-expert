@@ -15,33 +15,27 @@ module.exports = {
   module: {
     rules: [
       // jika memakai css
-      // {
-      //   test: /\.css$/,
-      //   use: [
-      //     {
-      //       loader: 'style-loader',
-      //     },
-      //     {
-      //       loader: 'css-loader',
-      //     },
-      //   ],
-      // },
-      // jika memakai scss/sass
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.css$/,
         use: [
           {
-            loader: 'style-loader'
+            loader: 'style-loader',
           },
           {
-            loader: 'css-loader'
+            loader: 'css-loader',
           },
-          {
-            loader: 'sass-loader'
-          },
-        ]
-
+        ],
       },
+      // jika memakai scss/sass
+      // {
+      //   test: /\.s[ac]ss$/i,
+      //   use: [
+      //     'style-loader',
+      //     'css-loader',
+      //     'sass-loader'
+      //   ]
+
+      // },
     ],
   },
   plugins: [
