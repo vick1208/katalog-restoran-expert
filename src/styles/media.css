@@ -1,6 +1,6 @@
 #mainRestaurant {
     display: grid;
-    grid-row-gap: 15px;
+    grid-row-gap: 13px;
 }
 
 @media screen and (min-width: 310px) {
@@ -31,9 +31,7 @@
     .mainContent {
         font-size: 10px;
     }
-    .navbar{
-        display: none;
-    }
+
 }
 
 @media screen and (min-width: 640px) {
@@ -47,6 +45,7 @@
     #itemPicture {
         max-height: 100%;
     }
+
     footer {
         font-size: 13px;
     }
@@ -62,6 +61,29 @@
 
     .mainContent {
         font-size: 14px;
+    }
+    .hamburger {
+        display: none;
+    }
+
+    .nav__item {
+        display: inline-block;
+        position: static;
+        margin-left: 1.5rem;
+        font-size: 1.2rem;
+        background-color: green;
+    }
+    
+    .nav__item a {
+        padding: 2rem 1rem;
+        text-decoration: none;
+        color: #fffafa;
+        border: 1px solid transparent;
+        border-radius: 10px;
+    }
+    
+    .nav__item a:hover {
+        color: #fca5a5;
     }
 
 }
@@ -90,12 +112,11 @@
         font-size: 25px;
         margin: 10px;
     }
-    .nav__logo{
+
+    .nav__logo {
         font-size: 2.6rem;
     }
-    .navbar{
-        display: block;
-    }
+    
 }
 
 

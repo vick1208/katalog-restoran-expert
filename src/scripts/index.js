@@ -4,6 +4,10 @@ import '../styles/main.css'
 import '../styles/media.css'
 
 
+const hamburger = document.getElementById('hamburger')
+const drawer = document.querySelector('#drawer')
+const main = document.querySelector('.mainContent');
+
 
 
 

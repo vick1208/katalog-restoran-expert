@@ -51,6 +51,18 @@ body {
     border-bottom: 3px solid #1E293B;
 }
 
+.hamburger{
+    display: block;
+}
+.header__container .hamburger button {
+    background-color: transparent;
+    border: none;
+}
+
+.hb {
+    width: 40px;
+    color: #fffafa;
+}
 
 .nav__logo {
     font-family: "Playfair Display", serif;
@@ -61,27 +73,29 @@ body {
     text-decoration: none;
 }
 
-.header__container nav ul li {
-    display: inline-block;
-    margin-left: 1.5rem;
-    font-size: 1.2rem;
+.nav__item {
+    /* display: none; */
+    /* flex-direction: column;
+    position: absolute; */
+
+    background-color: black;
 }
 
-.header__container nav ul li a {
-    padding: 2rem 1rem;
+.nav__item a {
+    padding: 1rem 0.5rem;
     text-decoration: none;
     color: #fffafa;
     border: 1px solid transparent;
     border-radius: 10px;
 }
 
-.header__container nav ul li a:hover {
+.nav__item a:hover {
     color: #fca5a5;
 }
 
 .hero__container {
     display: flex;
-    background: linear-gradient(rgba(1, 1, 1, 0.8), rgba(0, 2, 0, 0.2)), url("../public/images/heros/hero-image_1.jpg");
+    background: linear-gradient(90deg, rgba(1,1,1,0.8), rgba(0,2,0,0.2) 80%), url("../public/images/heros/hero-image_1.jpg");
     width: 100%;
     min-height: 31.25rem;
     background-size: cover;
@@ -161,6 +175,7 @@ p.itemRating {
 .itemPicture {
     width: 100%;
     height: 250px;
+    filter: contrast(0.75);
 }
 
 .itemDesc {
