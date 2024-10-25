@@ -94,7 +94,7 @@
         font-size: 2.6rem;
     }
     .navbar{
-        display: inline-block;
+        display: block;
     }
 }
 
