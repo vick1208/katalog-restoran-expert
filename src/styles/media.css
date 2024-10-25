@@ -31,8 +31,49 @@
     .mainContent {
         font-size: 10px;
     }
-
 }
+
+@media screen and (max-width: 640px) {
+
+    #hamburger {
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .nav__list {
+        position: absolute;
+        top: 0;
+        right: -160px;
+        background-color: #1E293B;
+        list-style-type: none;
+        width: 30%;
+        height: 20%;
+        transition: transform 400ms ease-in-out;
+    }
+    
+    .nav__list.open {
+        transform: translateX(-160px);
+        display: block;
+        width: 30%;
+
+    }
+
+    .nav__item a {
+        display: block;
+        margin: 1.5rem;
+        width: 100%;
+        color: #fffafa;
+        text-decoration: none;
+    }
+
+
+
+    .nav__logo {
+        width: 100%;
+    }
+}
+
 
 @media screen and (min-width: 640px) {
     #mainRestaurant {
@@ -62,6 +103,7 @@
     .mainContent {
         font-size: 14px;
     }
+
     .hamburger {
         display: none;
     }
@@ -71,9 +113,8 @@
         position: static;
         margin-left: 1.5rem;
         font-size: 1.2rem;
-        background-color: green;
     }
-    
+
     .nav__item a {
         padding: 2rem 1rem;
         text-decoration: none;
@@ -81,10 +122,11 @@
         border: 1px solid transparent;
         border-radius: 10px;
     }
-    
-    .nav__item a:hover {
-        color: #fca5a5;
+
+    .nav__logo {
+        font-size: 3.2rem;
     }
+
 
 }
 
@@ -113,10 +155,6 @@
         margin: 10px;
     }
 
-    .nav__logo {
-        font-size: 2.6rem;
-    }
-    
 }
 
 

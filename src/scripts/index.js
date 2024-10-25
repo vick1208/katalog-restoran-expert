@@ -4,10 +4,22 @@ import '../styles/main.css'
 import '../styles/media.css'
 
 
-const hamburger = document.getElementById('hamburger')
-const drawer = document.querySelector('#drawer')
-const main = document.querySelector('.mainContent');
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.getElementById("hamburger");
+    const navList = document.querySelector(".nav__list");
 
+    hamburger.addEventListener("click", function (event) {
+        event.stopPropagation();
+        navList.classList.toggle("open");
+    });
+
+    document.addEventListener("click", function (event) {
+        if (!navList.contains(event.target) && event.target !== hamburger) {
+
+            navList.classList.remove("open");
+        }
+    });
+});
 
 
 
@@ -32,9 +44,9 @@ data.forEach(function (item) {
             </div>
             <p class="itemCity">${item.city}</p>
             <div class="itemDesc">
-                <h1><a href="#">${item.name}</a></h1>
+                <h2><a href="#">${item.name}</a></h2>
                 <div>
-                    <p>${item.description.slice(0, 150)}...</p>
+                    <p>${item.description.slice(0, 100)}...</p>
                 </div>
                 <p class="itemRating">Rating: <a href="#" class="link__rating">${item.rating} &#x2B50;</a></p>
             </div>
