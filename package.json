@@ -38,6 +38,9 @@
     "whatwg-fetch": "^3.6.2"
   },
   "dependencies": {
+    "image-minimizer-webpack-plugin": "^4.1.0",
+    "imagemin": "^9.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
     "regenerator-runtime": "^0.14.0"
   }
 }
