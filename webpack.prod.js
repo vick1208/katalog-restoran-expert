@@ -28,7 +28,8 @@ module.exports = merge(common, {
           implementation: ImageMinimizerWebpackPlugin.imageminMinify,
           options: {
             plugins: [
-              "imagemin-mozjpeg",
+              'imagemin-mozjpeg',
+              'imagemin-pngquant'
             ],
           },
         },
