@@ -1,8 +1,7 @@
 import 'regenerator-runtime'; /* for async await transpile */
-// import file css
-import '../styles/main.css'
-import '../styles/media.css'
-
+// import file scss
+import '../scss/main.scss'
+import '../scss/media.scss'
 
 document.addEventListener("DOMContentLoaded", function () {
     const hamburger = document.getElementById("hamburger");
