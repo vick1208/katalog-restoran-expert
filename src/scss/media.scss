@@ -7,7 +7,6 @@ $background-color_1: #1E293B;
 }
 @media screen and (min-width: 310px) and (max-width: 640px) {
 	#mainRestaurant {
-		display: grid;
 		grid-template-columns: 1fr;
 		grid-column-gap: 10px;
 		grid-row-gap: 16px;
@@ -69,7 +68,6 @@ $background-color_1: #1E293B;
 }
 @media screen and (min-width: 640px) {
 	#mainRestaurant {
-		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-column-gap: 10px;
 		grid-row-gap: 16px;
@@ -112,7 +110,6 @@ $background-color_1: #1E293B;
 }
 @media screen and (min-width: 768px) {
 	#mainRestaurant {
-		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-column-gap: 16px;
 		grid-row-gap: 16px;
@@ -133,7 +130,6 @@ $background-color_1: #1E293B;
 }
 @media screen and (min-width: 900px) {
 	#mainRestaurant {
-		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		gap: 16px;
 	}
