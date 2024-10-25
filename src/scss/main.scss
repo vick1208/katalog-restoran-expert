@@ -38,14 +38,14 @@ body {
 	position: absolute;
 	top: -100%;
 	left: 0px;
-	z-index: 7;
+	z-index: 2;
 	background-color: $background-color_1;
 	font-size: 1rem;
 	padding: 0.5rem;
 	border-radius: 10px;
 	color: $color_1;
 	text-decoration: none;
-	z-index: 100;
+	z-index: 3;
 	min-height: 44px;
 	min-width: 44px;
 	&:focus {

@@ -34,18 +34,21 @@ $background-color_1: #1E293B;
 	}
 	.nav__list {
 		position: absolute;
-		top: 0;
-		right: -160px;
-		background-color: $background-color_1;
+		top: 25vh;
+		right: 0;
+		z-index: 3;
 		list-style-type: none;
-		width: 30%;
-		height: 30em;
-		transition: transform 400ms ease-in-out;
+		visibility: hidden;
+		width: 0;
+		transition: all 500ms ease-in;
 	}
 	.nav__list.open {
-		transform: translateX(-160px);
-		display: block;
-		width: 30%;
+		transform: translate(0);
+		visibility: visible;
+		background-color: $background-color_1;
+		width: 40vw;
+		height: fit-content;
+		transition: all 500ms ease-out;
 	}
 	.nav__item {
 		a {

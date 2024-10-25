@@ -26,6 +26,18 @@
       <p>
         <a href="/" class="nav__logo">Bon Appetit</a>
       </p>
+
+      <div class="hamburger">
+        <button id="hamburger" aria-label="menu">
+          <svg class="hb" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 18L20 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <path d="M4 12L20 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <path d="M4 6L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+
+        </button>
+      </div>
+      
       <nav class="navbar" id="drawer">
         <ul class="nav__list">
           <li class="nav__item"><a href="/">Home</a></li>
@@ -33,16 +45,8 @@
           <li class="nav__item"><a href="https://www.linkedin.com/in/vicky-alex/" target="_blank">About Us</a></li>
         </ul>
       </nav>
-      <div class="hamburger">
-        <button id="hamburger" aria-label="menu">
-          <svg class="hb" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4 18L20 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            <path d="M4 12L20 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            <path d="M4 6L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>  
-        </button>
-      </div>
-      
+
+
     </div>
     <div class="hero__container">
       <div class="hero__inner">
@@ -53,13 +57,13 @@
 
   <!-- Bagian main content halaman -->
   <main>
-    <div id="main" class="mainContent">
+    <div id="main" class="mainContent" tabindex="0">
       <h2>Explore Restaurants</h2>
     </div>
 
-    <div  class="mainContent" tabindex="0">
+    <div class="mainContent">
       <div class="restaurantList">
-        <div class="restaurantItem" id="mainRestaurant">
+        <div class="restaurantItem" id="mainRestaurant" tabindex="0">
 
         </div>
       </div>

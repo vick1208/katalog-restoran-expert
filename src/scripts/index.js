@@ -7,13 +7,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const hamburger = document.getElementById("hamburger");
     const navList = document.querySelector(".nav__list");
 
-    hamburger.addEventListener("click", function (event) {
-        event.stopPropagation();
-        navList.classList.toggle("open");
+    hamburger.addEventListener("click", function (e) {
+        e.stopPropagation();
+        navList.classList.toggle('open');
     });
 
-    document.addEventListener("click", function (event) {
-        if (!navList.contains(event.target) && event.target !== hamburger) {
+    document.addEventListener("click", function (e) {
+        if (!navList.contains(e.target) && e.target !== hamburger) {
 
             navList.classList.remove("open");
         }
