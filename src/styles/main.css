@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+:root{
+    --snow: #fffafa;
+    --slate-800: #1E293B;
+    --zinc-50: #fafafa;
+}
+
 html {
     width: 100%;
     height: 100%;
@@ -24,7 +30,7 @@ body {
     top: -100%;
     left: 0px;
     z-index: 7;
-    background-color: #fffafa;
+    background-color: var(--snow);
     font-size: 1rem;
     padding: 0.5rem;
     border-radius: 10px;
@@ -42,13 +48,13 @@ body {
 
 .header__container {
     display: flex;
-    background-color: #1E293B;
+    background-color: var(--slate-800);
     min-height: 3rem;
     width: 100%;
     padding: 1rem;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 3px solid #1E293B;
+    border-bottom: 3px solid var(--slate-800);
 }
 
 .hamburger{
@@ -62,7 +68,7 @@ body {
 .hb {
     width: 3rem;
     height: 3rem;
-    color: #fffafa;
+    color: var(--snow);
 }
 
 .nav__logo {
@@ -70,13 +76,13 @@ body {
     font-size: 2.8rem;
     font-weight: bold;
     text-transform: capitalize;
-    color: #fffafa;
+    color: var(--snow);
     text-decoration: none;
 }
 
 .nav__item a:hover {
     color: #fca5a5;
-    border: 1px solid #fafafa;
+    border: 1px solid var(--zinc-50);
 }
 
 .hero__container {
@@ -91,7 +97,7 @@ body {
 .hero__inner {
     margin: 0 auto;
     width: 100%;
-    color: #fffafa;
+    color: var(--snow);
     text-align: center;
 }
 
@@ -133,7 +139,7 @@ body {
     left: 0px;
     border-radius: 5px;
     padding: 1rem;
-    color: #FAFAFA;
+    color: var(--zinc-50);
     height: 45px;
     width: 100%;
     align-items: center;
@@ -154,7 +160,7 @@ body {
 }
 
 p.itemRating {
-    color: #FAFAFA;
+    color: var(--zinc-50);
 }
 
 
@@ -177,16 +183,16 @@ p.itemRating {
 }
 
 .itemDesc .link__rating {
-    color: #FAFAFA;
+    color: var(--zinc-50);
 }
 
 footer {
-    background-color: #1E293B;
+    background-color: var(--slate-800);
     padding: 2rem;
     width: 100%;
 }
 
 .footer__content {
     text-align: center;
-    color: #FAFAFA;
+    color: var(--zinc-50);
 }
