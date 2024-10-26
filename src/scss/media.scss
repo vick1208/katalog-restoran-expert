@@ -15,17 +15,17 @@ $background-color_1: #1E293B;
 		max-height: 100%;
 	}
 	footer {
-		font-size: 0.75rem;
+		font-size: calc(3rem/4);
 	}
 	.hero__title {
-		font-size: 38px;
+		font-size: calc(3rem - 10px);
 	}
 	.hero__tag {
-		font-size: 20px;
+		font-size: calc(1rem + 4px);
 		margin: 15px;
 	}
 	.mainContent {
-		font-size: 0.75rem;
+		font-size: calc(3rem/4);
 	}
 	.hamburger {
 		display: flex;
@@ -35,18 +35,19 @@ $background-color_1: #1E293B;
 	.nav__list {
 		visibility: hidden;
 		position: absolute;
-		top: 20vh;
-		right: 30vw;
+		top: calc(88vh / 4);
+		right: 0;
 		list-style-type: none;
+		overflow-x: hidden;
 		width: 0;
 		transition: all 500ms ease-in-out;
 	}
 	.nav__list.open {
-		transform: translateX(30vw);
+		transform: translateX(0);
 		visibility: visible;
 		background-color: $background-color_1;
-		width: 40vw;
-		height: 100vh;
+		width: calc(80vw / 2);
+		height: calc(8vh * 8);
 	}
 	.nav__item {
 		a {
@@ -77,17 +78,17 @@ $background-color_1: #1E293B;
 		max-height: 100%;
 	}
 	footer {
-		font-size: 13px;
+		font-size: calc(1rem - 3px);
 	}
 	.hero__title {
-		font-size: 39px;
+		font-size: calc(2rem + 7px);
 	}
 	.hero__tag {
-		font-size: 23px;
+		font-size: calc(1rem + 7px);
 		margin: 22px;
 	}
 	.mainContent {
-		font-size: 14px;
+		font-size: calc(1rem - 2px);
 	}
 	.hamburger {
 		display: none;
