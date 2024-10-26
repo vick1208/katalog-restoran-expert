@@ -27,27 +27,26 @@ $background-color_1: #1E293B;
 	.mainContent {
 		font-size: 0.75rem;
 	}
-	#hamburger {
-		display: inline-flex;
+	.hamburger {
+		display: flex;
 		align-items: center;
 		justify-content: end;
 	}
 	.nav__list {
 		visibility: hidden;
 		position: absolute;
-		top: calc(30vh - 3rem);
-		right: 40vw;
-		z-index: 3;
+		top: 20vh;
+		right: 30vw;
 		list-style-type: none;
 		width: 0;
 		transition: all 500ms ease-in-out;
 	}
 	.nav__list.open {
-		transform: translate(40vw);
+		transform: translateX(30vw);
 		visibility: visible;
 		background-color: $background-color_1;
 		width: 40vw;
-		min-height: 40vh;
+		height: 100vh;
 	}
 	.nav__item {
 		a {
