@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-console.log("OK");
 
 const yearElement = document.getElementById('year')
 let date = new Date();
@@ -32,7 +31,6 @@ yearElement.innerText = date.getFullYear();
 let obj = await import('../public/data/DATA.json');
 const content = obj.default;
 const data = content.restaurants;
-console.log(data);
 
 let listContent = ``;
 data.forEach(function (item) {
@@ -45,7 +43,7 @@ data.forEach(function (item) {
             <div class="itemDesc">
                 <h2><a href="#">${item.name}</a></h2>
                 <div>
-                    <p>${item.description.slice(0, 100)}...</p>
+                    <p class="textDesc">${item.description}</p>
                 </div>
                 <p class="itemRating">Rating: <a href="#" class="link__rating">${item.rating} &#x2B50;</a></p>
             </div>

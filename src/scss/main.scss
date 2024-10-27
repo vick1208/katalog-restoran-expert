@@ -175,6 +175,14 @@ p.itemRating {
 	.link__rating {
 		color: $color_5;
 	}
+
+	.textDesc{
+		white-space: nowrap;
+		width: 10rem;
+		min-height: calc(20vh / 5);
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
 }
 footer {
 	background-color: $background-color_2;
