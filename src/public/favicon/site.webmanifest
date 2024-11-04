@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "short_name": "",
+  "name": "Bon Appetit Restaurants App",
+  "short_name": "restaurant app",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
