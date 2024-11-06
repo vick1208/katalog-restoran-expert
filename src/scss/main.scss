@@ -1,14 +1,14 @@
 $color_1: black;
-$color_2: var(--snow);
+$color_2: #fffafa;
 $color_3: #fca5a5;
 $color_4: #57534E;
-$color_5: var(--zinc-50);
+$color_5: #fafafa;
 $color_6: rgb(255, 255, 255);
 $color_7: rgb(41, 37, 36);
 $font-family_1: "Lato", sans-serif;
 $font-family_2: "Playfair Display", serif;
-$background-color_1: var(--snow);
-$background-color_2: var(--slate-800);
+$background-color_1: #fffafa;
+$background-color_2: #1E293B;
 $background-color_3: transparent;
 $background-color_4: #D4D4D4;
 
@@ -17,11 +17,7 @@ $background-color_4: #D4D4D4;
 	margin: 0px;
 	box-sizing: border-box;
 }
-:root {
-	--snow: #fffafa;
-	--slate-800: #1E293B;
-	--zinc-50: #fafafa;
-}
+
 html {
 	width: 100%;
 	height: 100%;
@@ -60,7 +56,7 @@ body {
 	padding: 1rem;
 	justify-content: space-between;
 	align-items: center;
-	border-bottom: 3px solid var(--slate-800);
+	border-bottom: 3px solid $background-color_2;
 	.hamburger {
 		button {
 			background-color: $background-color_3;
@@ -86,7 +82,7 @@ body {
 	a {
 		&:hover {
 			color: $color_3;
-			border: 1px solid var(--zinc-50);
+			border: 1px solid $color_5;
 		}
 	}
 }

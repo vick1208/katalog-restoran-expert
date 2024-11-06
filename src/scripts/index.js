@@ -1,4 +1,5 @@
-import 'regenerator-runtime'; /* for async await transpile */
+import 'regenerator-runtime';
+import './components/nav-bar';
 // import file scss
 import '../scss/main.scss';
 import '../scss/media.scss';

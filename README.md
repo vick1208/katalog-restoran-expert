@@ -2,4 +2,4 @@
 
 Project Menjadi Front-End Web Developer Expert
 
-Progress Kelas: 21%
+Progress Kelas: 58%

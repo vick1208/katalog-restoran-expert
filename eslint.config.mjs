@@ -9,6 +9,6 @@ export default [
   pluginJs.configs.recommended,
   daStyle,
   {
-    ignores:['webpack.*.js']
+    ignores:['webpack.*.js', '**/node_modules/', '**/dist/']
   }
 ];
