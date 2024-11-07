@@ -1,12 +1,25 @@
 {
+  "id":"bon-app-pwa-1",
   "start_url":"./index.html",
   "name": "Bon Appetit Restaurants Lite",
   "short_name": "restaurant app",
   "description":"Restaurant search App",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#d84415",
+  "theme_color": "#8db9dc",
+  "background_color": "#fffafa",
   "icons": [
+    {
+      "src": "/favicon/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    },
     {
       "src": "/favicon/android-chrome-192x192.png",
       "sizes": "192x192",
