@@ -5,7 +5,7 @@
   "short_name": "restaurant app",
   "description":"Restaurant search App",
   "display": "standalone",
-  "theme_color": "#8db9dc",
+  "theme_color": "#1E293B",
   "background_color": "#fffafa",
   "icons": [
     {
