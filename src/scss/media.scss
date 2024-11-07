@@ -29,9 +29,7 @@ $background-color_1: #1E293B;
 		font-size: calc(3rem/4);
 	}
 	.hamburger {
-		display: flex;
-		align-items: center;
-		justify-content: end;
+		display: block;
 	}
 	.nav__list {
 		visibility: hidden;
@@ -48,7 +46,7 @@ $background-color_1: #1E293B;
 		visibility: visible;
 		background-color: $background-color_1;
 		width: calc(80vw / 2);
-		height: calc(8vh * 8);
+		height: calc(6vh * 5);
 	}
 	.nav__item {
 		a {
