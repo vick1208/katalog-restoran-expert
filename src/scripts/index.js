@@ -13,12 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     navList.classList.toggle('open');
   });
 
-  document.addEventListener('click', (e) => {
-    if (!navList.contains(e.target) && e.target !== hamburger) {
 
-      navList.classList.remove('open');
-    }
-  });
 });
 
 
