@@ -1,21 +1,35 @@
 import 'regenerator-runtime'; /* for async await transpile */
+import '../scss/main.scss';
+import '../scss/media.scss';
 import './components/nav-bar';
 import './components/hero-section';
 import './components/footer-section';
-// import file scss
-import '../scss/main.scss';
-import '../scss/media.scss';
+import App from './views/app';
 
-document.addEventListener('DOMContentLoaded', () => {
-  const hamburger = document.getElementById('hamburger');
-  const navList = document.querySelector('.nav__list');
+// document.addEventListener('DOMContentLoaded', () => {
+//   const hamburger = document.getElementById('hamburger');
+//   const navList = document.querySelector('.nav__list');
 
-  hamburger.addEventListener('click', (e) => {
-    e.stopPropagation();
-    navList.classList.toggle('open');
-  });
+//   hamburger.addEventListener('click', (e) => {
+//     e.stopPropagation();
+//     navList.classList.toggle('open');
+//   });
 
 
+// });
+
+
+
+
+const app = new App({
+  button: document.getElementById('hamburger'),
+  drawer: document.querySelector('#drawer'),
+  content: document.querySelector('#mainContent')
+});
+
+window.addEventListener('hashchange', (event)=>{
+  console.log(app); // sementara
+  console.log(event); // sementara
 });
 
 
