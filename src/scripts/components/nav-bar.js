@@ -7,7 +7,7 @@ class NavBar extends HTMLElement{
     this.innerHTML = `
     <div class="header__container">
       <p>
-        <a href="/" class="nav__logo">Bon Appetit</a>
+        <a href="/" class="nav__logo">Bon Appétit</a>
       </p>
 
       <div class="hamburger">

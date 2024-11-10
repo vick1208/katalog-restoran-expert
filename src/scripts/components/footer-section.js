@@ -6,7 +6,7 @@ class FooterSection extends HTMLElement{
   render(){
     this.innerHTML = `
         <p class="footer__content">
-            Copyright &copy; <span id="year">date</span> - Bon Appetit
+            Copyright &copy; <span id="year">date</span> - Bon Appétit
         </p>
         `;
   }
