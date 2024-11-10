@@ -11,7 +11,7 @@ const createItemsTemplate = (restaurant) => `
                 <div>
                     <p class="textDesc">${restaurant.description}</p>
                 </div>
-                <p class="itemRating">Rating: <a href="#" class="link__rating">${restaurant.rating} <i class="fa-solid fa-star" style="color: #FFD43B;" aria-hidden="true"></i></a></p>
+                <p class="itemRating">Rating: <a href="#" class="link__rating">${restaurant.rating} <i class="fa-solid fa-star" aria-hidden="true"></i></a></p>
             </div>
         </div>
 `;
