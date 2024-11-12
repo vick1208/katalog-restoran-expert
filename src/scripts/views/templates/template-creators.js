@@ -18,10 +18,54 @@ const createItemsTemplate = (restaurant) => `
 
 const createDetailTemplate = (restaurant) => `
 
-    <h2>${restaurant.name}</h2>
+    <h2>Informasi ${restaurant.name}</h2>
     <div class="item__detail">
+        <div class="detail__header">
+        <img src="${CONFIG.BASE_URL_IMAGES + restaurant.pictureId}" alt="${restaurant.name}"/>
+        <div class="detail__headerContent">
+            <h3>${restaurant.name}</h3>
+            <h4>${restaurant.address}</h4>
+            <h4>${restaurant.city}</h4>
+            <p>${restaurant.description}</p>
+        </div>
+        <div class="detail__menu">
+            <h2>Daftar Menu ${restaurant.name}</h2>
+        <div class="detail__menuGroup">
+            <div class="detail__foodMenu">
+            <h3>Menu Makanan</h3>
+            <table>
+                <tbody id="foodMenu"></tbody>
+            </table>
+        </div>
+            <div class="detail__drinkMenu">
+                <h3>Daftar Menu Minuman</h3>
+            <table>
+                <tbody id="drinkMenu"></tbody>
+            </table>
+            </div>
+            </div>
+        </div>
+        <div class="detail__review">
+            <h2>Review Pelanggan</h2>
+            <div id="reviewPost" class="review__post"></div>
+        </div>
+        <div class="detail__postReview">
+            <h2>Post your review</h2>
+            <div class="postReview__form">
+                <div class="form__group">
+                    <label for="inputName">Nama Anda</label>
+                    <input id="inputName" class="form__control" type="text" placeholder="Masukkan Nama Anda" required/>
+                </div>
+                <div class="form__group">
+                    <label for="inputReview">Review Anda</label>
+                    <textarea id="inputReview" class="form__control" type="text" placeholder="Masukkan Review Anda" required></textarea>
+                </div>
+                <div class="form__group">
+                    <button id="submitReview" class="form__submit">Tambahkan Review</button>
+                </div>
+            </div>>
+        </div>
     </div>
-
 `;
 
 
