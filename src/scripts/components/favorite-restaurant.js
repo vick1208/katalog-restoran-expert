@@ -4,11 +4,9 @@ class FavoriteRestaurant extends HTMLElement{
   }
   _render(){
     this.innerHTML = `
-        <h2>Daftar Restoran Favorit Anda</h2>
-        <div>
-          <input id="inputQuery" type="search" placeholder="Cari Restoran yang Anda Suka"/>
-          <input id="submitSearch" type="submit" value="Cari"/>
-        </div>
+    <div class="mainContent">
+      <h2>Your Favorite Restaurant List</h2>
+    </div>
         <div id="restaurants" class="restaurants"></div>
         `;
   }

@@ -4,6 +4,8 @@ import '../scss/media.scss';
 import './components/nav-bar';
 import './components/hero-section';
 import './components/footer-section';
+import './components/restaurant-list';
+import './components/favorite-restaurant';
 import App from './views/app';
 
 // document.addEventListener('DOMContentLoaded', () => {
@@ -27,9 +29,12 @@ const app = new App({
   content: document.querySelector('#mainContent')
 });
 
-window.addEventListener('hashchange', (event)=>{
-  console.log(app); // sementara
-  console.log(event); // sementara
+window.addEventListener('hashchange', ()=>{
+  app.renderPage();
+});
+
+window.addEventListener('load', () =>{
+  app.renderPage();
 });
 
 
