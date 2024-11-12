@@ -7,24 +7,20 @@ const Home = {
         `;
   },
   async afterRender(){
+
+    this._showHero();
+
     const restaurants = await RestaurantDbSource.restaurantsList();
     const restaurantList = document.querySelector('#restaurants');
 
-    if (restaurants.length > 0) {
+    restaurants.forEach((resto) => {
+      restaurantList.innerHTML += createItemsTemplate(resto);
+    });
+  },
 
-      restaurants.forEach((resto) => {
-        restaurantList.innerHTML += createItemsTemplate(resto);
-      });
-
-    } else {
-      const emptyArrayErr = document.querySelector('favorite-restaurant');
-      emptyArrayErr.innerHTML += `
-            <div>
-                <p>
-                    Daftar Restoran Tidak Ditemukan.
-                </p>
-            </div>`;
-    }
+  _showHero(){
+    const heroEl = document.querySelector('hero-section');
+    heroEl.style.display = 'flex';
   }
 };
 
