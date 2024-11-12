@@ -7,8 +7,8 @@ class FavoriteRestaurant extends HTMLElement{
     <div class="mainContent">
       <h2>Your Favorite Restaurant List</h2>
     </div>
-        <div id="restaurants" class="restaurants"></div>
-        `;
+    <div id="restaurants" class="restaurants"></div>
+    `;
   }
 
 }
