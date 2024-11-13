@@ -36,14 +36,13 @@ body {
 	position: absolute;
 	top: -100%;
 	left: 0px;
-	z-index: 2;
 	background-color: $background-color_1;
 	font-size: 1rem;
 	padding: 0.5rem;
 	border-radius: 10px;
 	color: $color_1;
 	text-decoration: none;
-	z-index: 3;
+	z-index: 10;
 	min-height: 44px;
 	min-width: 44px;
 
@@ -385,8 +384,8 @@ p.itemRating {
 					cursor: pointer;
 
 					&:hover {
-						background-color: $color_4;
-						color: $color_3;
+						background-color: $background-color_2;
+						color: $color_2;
 					}
 				}
 			}

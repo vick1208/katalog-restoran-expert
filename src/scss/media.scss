@@ -43,6 +43,7 @@ $background-color_1: #1E293B;
 		visibility: hidden;
 		position: absolute;
 		top: calc(100px - 20px);
+		z-index: 10;
 		right: 0;
 		overflow-x: hidden;
 		width: 0;
