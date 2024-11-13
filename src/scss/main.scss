@@ -234,21 +234,25 @@ p.itemRating {
 
 	.detail__header {
 		display: flex;
-		// flex-direction: column;
-		justify-content: space-between;
+		justify-content: space-around;
+		
+
 		img {
 			width: 50%;
 			border-radius: 10px;
 			object-fit: cover;
 		}
-
+		
 		.detail__headerContent {
-			width: 45%;
-
+			width: 40%;
+			
 			h2 {
 				font-size: 2rem;
 			}
 
+			h3{
+				font-size: 1.5rem;
+			}
 
 
 			h4 {
@@ -316,7 +320,7 @@ p.itemRating {
 
 			.review__card {
 				width: 100%;
-				padding: 1.5rem 1rem;
+				padding: 0.8rem;
 				background-color: $color_4;
 				border-radius: 10px;
 

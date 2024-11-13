@@ -11,7 +11,7 @@ const createItemsTemplate = (restaurant) => `
                 <div>
                     <p class="textDesc">${restaurant.description}</p>
                 </div>
-                <p class="itemRating">Rating: <a href="#" class="link__rating">${restaurant.rating} <i class="fa-solid fa-star" aria-hidden="true"></i></a></p>
+                <p class="itemRating">Rating: <a href="#/detail/${restaurant.id}" class="link__rating">${restaurant.rating} <i class="fa-solid fa-star" aria-hidden="true"></i></a></p>
             </div>
         </div>
 `;
@@ -20,28 +20,29 @@ const createDetailTemplate = (restaurant) => `
     <h2 class="detail__title">Informasi ${restaurant.name}</h2>
     <div class="restaurant__detail">
         <div class="detail__header">
-        <img src="${CONFIG.BASE_URL_IMAGES + restaurant.pictureId}" alt="${restaurant.name}"/>
-        <div class="detail__headerContent">
-            <h2>${restaurant.name}</h2>
-            <h4>${restaurant.address}</h4>
-            <h4>${restaurant.city}</h4>
-            <p>${restaurant.description}</p>
+            <img src="${CONFIG.BASE_URL_IMAGES + restaurant.pictureId}" alt="${restaurant.name}"/>
+            <div class="detail__headerContent">
+                <h2>${restaurant.name}</h2>
+                <h3>${restaurant.address}</h3>
+                <h4>${restaurant.city}</h4>
+                <p>${restaurant.description}</p>
+            </div>
         </div>
         <div class="detail__menu">
             <h2>Daftar Menu ${restaurant.name}</h2>
-        <div class="detail__menuGroup">
-            <div class="detail__foodMenu">
-            <h3>Menu Makanan</h3>
-            <table>
-                <tbody id="foodMenu"></tbody>
-            </table>
-        </div>
-            <div class="detail__drinkMenu">
-                <h3>Daftar Menu Minuman</h3>
-            <table>
-                <tbody id="drinkMenu"></tbody>
-            </table>
-            </div>
+            <div class="detail__menuGroup">
+                <div class="detail__foodMenu">
+                    <h3>Menu Makanan</h3>
+                    <table>
+                        <tbody id="foodMenu"></tbody>
+                    </table>
+                </div>
+                <div class="detail__drinkMenu">
+                    <h3>Daftar Menu Minuman</h3>
+                    <table>
+                        <tbody id="drinkMenu"></tbody>
+                    </table>
+                </div>
             </div>
         </div>
         <div class="detail__review">
