@@ -17,13 +17,12 @@ const createItemsTemplate = (restaurant) => `
 `;
 
 const createDetailTemplate = (restaurant) => `
-
-    <h2>Informasi ${restaurant.name}</h2>
-    <div class="item__detail">
+    <h2 class="detail__title">Informasi ${restaurant.name}</h2>
+    <div class="restaurant__detail">
         <div class="detail__header">
         <img src="${CONFIG.BASE_URL_IMAGES + restaurant.pictureId}" alt="${restaurant.name}"/>
         <div class="detail__headerContent">
-            <h3>${restaurant.name}</h3>
+            <h2>${restaurant.name}</h2>
             <h4>${restaurant.address}</h4>
             <h4>${restaurant.city}</h4>
             <p>${restaurant.description}</p>
@@ -63,7 +62,7 @@ const createDetailTemplate = (restaurant) => `
                 <div class="form__group">
                     <button id="submitReview" class="form__submit">Tambahkan Review</button>
                 </div>
-            </div>>
+            </div>
         </div>
     </div>
 `;

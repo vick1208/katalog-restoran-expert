@@ -8,7 +8,7 @@ const Detail = {
   async render(){
     return `
     <div id="restaurantDetail"></div>
-    <div id="favoriteButtonContainer"></div>
+    <div id="favouriteButtonContainer"></div>
     `;
   },
 
@@ -19,18 +19,29 @@ const Detail = {
     const restaurant = await RestaurantDbSource.restaurantDetail(url.id);
     const restaurantContainer = document.querySelector('#restaurantDetail');
     restaurantContainer.innerHTML = createDetailTemplate(restaurant);
-    // const reviewSubmitBtn = document.querySelector('#submitReview');
-
-    // reviewSubmitBtn.addEventListener('click',(e) => {
-    //   e.stopPropagation();
-
-    // }),
+    const reviewSubmitBtn = document.querySelector('#submitReview');
 
     FavouriteButtonInitiator.init({
-      FavouriteButtonContainer: document.querySelector('#favoriteButtonContainer'),
-      restaurant
+      favouriteButtonContainer: document.querySelector('#favouriteButtonContainer'),
+      restaurant:{
+        id: restaurant.id,
+        name: restaurant.name,
+        city: restaurant.city,
+        description: restaurant.description,
+        pictureId: restaurant.pictureId,
+        rating: restaurant.rating,
+      }
     });
 
+    this._menu(restaurant);
+    this._review(restaurant);
+
+
+
+    reviewSubmitBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+
+    });
 
   },
 
@@ -60,6 +71,22 @@ const Detail = {
       `;
     });
   },
+
+  _review(restaurant){
+
+    const { customerReviews } = restaurant;
+    const reviewPost = document.getElementById('reviewPost');
+    customerReviews.forEach((item) => {
+      reviewPost.innerHTML += `
+      <div class="review__card">
+        <h2 class="review__title">${item.review}</h2>
+        <p class="review__sender">${item.name}</p>
+        <p class="review__date">${item.date}</p>
+      </div>
+      `;
+    });
+
+  }
 
 };
 
