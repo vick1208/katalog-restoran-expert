@@ -2,6 +2,8 @@ import UrlParser from '../../routes/url-parser';
 import RestaurantDbSource from '../../data/restaurantdb-source';
 import { createDetailTemplate } from '../templates/template-creators';
 import FavouriteButtonInitiator from '../../utils/favourite-button-initiator';
+import ReviewPostInitiator from '../../utils/review-post-initiator';
+
 
 
 const Detail = {
@@ -19,7 +21,11 @@ const Detail = {
     const restaurant = await RestaurantDbSource.restaurantDetail(url.id);
     const restaurantContainer = document.querySelector('#restaurantDetail');
     restaurantContainer.innerHTML = createDetailTemplate(restaurant);
+
+    const reviewForm = document.querySelector('form');
     const reviewSubmitBtn = document.querySelector('#submitReview');
+    const nameInput = document.getElementById('inputName');
+    const reviewInput = document.getElementById('inputReview');
 
     FavouriteButtonInitiator.init({
       favouriteButtonContainer: document.querySelector('#favouriteButtonContainer'),
@@ -38,9 +44,25 @@ const Detail = {
 
 
 
-    reviewSubmitBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
+    reviewForm.addEventListener('input', () => {
+      reviewSubmitBtn.disabled = !(nameInput.value && reviewInput.value);
+    });
 
+    reviewForm.addEventListener('submit', (event) =>{
+      event.preventDefault();
+      const nameSubmit = document.getElementById('inputName');
+      const reviewSubmit = document.getElementById('inputReview');
+      const reviewSubmitButton = document.querySelector('#submitReview');
+
+      ReviewPostInitiator.init({
+        id: `${restaurant.id}`,
+        name: nameSubmit.value,
+        review: reviewSubmit.value
+      });
+
+      nameSubmit.value = '';
+      reviewSubmit.value = '';
+      reviewSubmitButton.disabled = true;
     });
 
   },
@@ -80,7 +102,7 @@ const Detail = {
       reviewPost.innerHTML += `
       <div class="review__card">
         <h2 class="review__title">${item.review}</h2>
-        <p class="review__sender">${item.name}</p>
+        <p class="review__sender">By ${item.name}</p>
         <p class="review__date">${item.date}</p>
       </div>
       `;

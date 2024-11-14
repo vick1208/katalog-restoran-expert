@@ -51,19 +51,19 @@ const createDetailTemplate = (restaurant) => `
         </div>
         <div class="detail__postReview">
             <h2>Post your review</h2>
-            <div class="postReview__form">
+            <form class="postReview__form">
                 <div class="form__group">
                     <label for="inputName">Nama Anda</label>
                     <input id="inputName" class="form__control" type="text" placeholder="Masukkan Nama Anda" required/>
                 </div>
                 <div class="form__group">
                     <label for="inputReview">Review Anda</label>
-                    <textarea id="inputReview" class="form__control" type="text" placeholder="Masukkan Review Anda" required></textarea>
+                    <textarea id="inputReview" class="form__control" placeholder="Masukkan Review Anda"></textarea>
                 </div>
                 <div class="form__group">
                     <button id="submitReview" class="form__submit">Tambahkan Review</button>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 `;

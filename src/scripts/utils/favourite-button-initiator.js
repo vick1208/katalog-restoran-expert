@@ -5,15 +5,12 @@ const FavouriteButtonInitiator = {
   async init({ favouriteButtonContainer, restaurant }) {
     this._favouriteButtonContainer = favouriteButtonContainer;
     this._restaurant = restaurant;
-    console.log(this._favouriteButtonContainer);
-    console.log(this._restaurant);
 
     await this._renderButton();
   },
 
   async _renderButton() {
     const { id } = this._restaurant;
-    console.log(id);
 
     if (await this._isRestoExisted(id)) {
       this._renderFavorited();

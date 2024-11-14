@@ -14,19 +14,6 @@ module.exports = {
   },
   module: {
     rules: [
-      // jika memakai file css
-      // {
-      //   test: /\.css$/,
-      //   use: [
-      //     {
-      //       loader: 'style-loader',
-      //     },
-      //     {
-      //       loader: 'css-loader',
-      //     },
-      //   ],
-      // },
-      // jika memakai file scss/sass
       {
         test: /\.s[ac]ss$/i,
         use: [

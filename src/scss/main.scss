@@ -320,7 +320,7 @@ p.itemRating {
 			.review__card {
 				width: 100%;
 				padding: 0.8rem;
-				background-color: $color_4;
+				background-color: $background-color_1;
 				border-radius: 10px;
 
 				.review__title {
@@ -331,13 +331,13 @@ p.itemRating {
 				.review__sender {
 					margin-top: 1rem;
 					font-size: 1.1rem;
-					color: $background-color_2;
+					color: $color_7;
 				}
 
 				.review__date {
 					margin-top: 0.2rem;
 					font-size: 0.9rem;
-					color: $background-color_2;
+					color: $color_7;
 				}
 			}
 		}
@@ -386,6 +386,11 @@ p.itemRating {
 					&:hover {
 						background-color: $background-color_2;
 						color: $color_2;
+					}
+
+					&:disabled{
+						opacity: 0.5;
+						cursor: not-allowed;
 					}
 				}
 			}
