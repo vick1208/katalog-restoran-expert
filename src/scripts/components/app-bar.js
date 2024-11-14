@@ -1,4 +1,4 @@
-class NavBar extends HTMLElement{
+class AppBar extends HTMLElement{
   connectedCallback(){
     this._render();
   }
@@ -34,4 +34,4 @@ class NavBar extends HTMLElement{
   }
 }
 
-customElements.define('nav-bar', NavBar);
+customElements.define('app-bar', AppBar);

@@ -1,7 +1,7 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../scss/main.scss';
 import '../scss/media.scss';
-import './components/nav-bar';
+import './components/app-bar';
 import './components/hero-section';
 import './components/footer-section';
 import './components/restaurant-list';
