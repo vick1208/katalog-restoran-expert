@@ -23,14 +23,14 @@ module.exports = merge(common, {
       },
     ],
   },
-  plugins:[
+  plugins: [
     new WorkboxWebpackPlugin.InjectManifest({
-      swSrc: path.resolve(__dirname,"src/scripts/sw.js"),
+      swSrc: path.resolve(__dirname, "src/scripts/sw.js"),
       swDest: "./sw.bundle.js"
     }),
   ],
-  optimization:{
-    minimizer:[
+  optimization: {
+    minimizer: [
       new ImageMinimizerWebpackPlugin({
         minimizer: {
           implementation: ImageMinimizerWebpackPlugin.imageminMinify,
@@ -44,4 +44,5 @@ module.exports = merge(common, {
       }),
     ],
   },
+  
 });

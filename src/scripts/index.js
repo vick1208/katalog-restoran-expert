@@ -1,12 +1,8 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../scss/main.scss';
 import '../scss/media.scss';
-import './components/app-bar';
-import './components/hero-section';
-import './components/footer-section';
-import './components/restaurant-list';
-import './components/favorite-restaurant';
-import './components/loading-overlay';
+import '../scss/loading.scss';
+import './components/index';
 import App from './views/app';
 import swRegister from './utils/sw-register';
 
