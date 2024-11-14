@@ -52,6 +52,49 @@ body {
 	}
 }
 
+loading-overlay{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100vw;
+	height: 100vh;
+	z-index: 50;
+	background-color: $color_6;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+
+	.loading__overlay{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		.loader {
+			width: 50px;
+			aspect-ratio: 1;
+			border-radius: 50%;
+			background: radial-gradient(farthest-side, #ffa516 94%, #0000) top/8px 8px no-repeat, conic-gradient(#0000 30%, #ffa516);
+			mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+			animation: l13 1s infinite linear;
+		}
+		p{
+			margin-top: 1rem;
+			font-size: 1.7rem;
+			letter-spacing: 3px;
+		}
+	}
+}
+
+.hide__loading{
+	visibility: hidden;
+}
+
+@keyframes l13 {
+	100% {
+		transform: rotate(1turn);
+	}
+}
+
 .header__container {
 	display: flex;
 	background-color: $background-color_2;
@@ -129,6 +172,19 @@ body {
 	padding: 32px;
 }
 
+.page__not-found{
+	width: 100%;
+	height: calc(34px * 12);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.message__not-found{
+		font-size: 1.8rem;
+	}
+}
+
+
+
 .restaurant-item__not__found {
 
 	width: 100%;
@@ -205,7 +261,7 @@ p.itemRating {
 		color: $color_7;
 		text-decoration: none;
 
-		&:hover{
+		&:hover {
 			color: $color_8;
 		}
 	}
@@ -239,22 +295,22 @@ p.itemRating {
 	.detail__header {
 		display: flex;
 		justify-content: space-around;
-		
+
 
 		img {
 			width: 50%;
 			border-radius: 10px;
 			object-fit: cover;
 		}
-		
+
 		.detail__headerContent {
 			width: 40%;
-			
+
 			h2 {
 				font-size: 2rem;
 			}
 
-			h3{
+			h3 {
 				font-size: 1.5rem;
 			}
 
@@ -271,7 +327,7 @@ p.itemRating {
 
 	.detail__menu {
 		margin-top: 3rem;
-		
+
 
 		h2 {
 			text-align: center;
@@ -393,7 +449,7 @@ p.itemRating {
 						color: $color_2;
 					}
 
-					&:disabled{
+					&:disabled {
 						opacity: 0.5;
 						cursor: not-allowed;
 					}
@@ -405,20 +461,20 @@ p.itemRating {
 
 
 .fav {
-    width: 3.5rem;
-    height: 3.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    border: none;
-    background-color: $color_8;
-    font-size: 1.3rem;
-    color: $color_2;
-    border-radius: 50%;
-    cursor: pointer;
+	width: 3.5rem;
+	height: 3.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	bottom: 2rem;
+	right: 2rem;
+	border: none;
+	background-color: $color_8;
+	font-size: 1.3rem;
+	color: $color_2;
+	border-radius: 50%;
+	cursor: pointer;
 }
 
 

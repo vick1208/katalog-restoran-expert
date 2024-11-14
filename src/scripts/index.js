@@ -6,13 +6,9 @@ import './components/hero-section';
 import './components/footer-section';
 import './components/restaurant-list';
 import './components/favorite-restaurant';
+import './components/loading-overlay';
 import App from './views/app';
 import swRegister from './utils/sw-register';
-
-
-
-
-
 
 const app = new App({
   button: document.getElementById('hamburger'),
@@ -27,6 +23,7 @@ window.addEventListener('hashchange', ()=>{
 window.addEventListener('load', async () =>{
   app.renderPage();
   await swRegister();
+  document.querySelector('loading-overlay').classList.add('hide__loading');
 });
 
 
