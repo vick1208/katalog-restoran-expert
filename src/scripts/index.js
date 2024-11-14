@@ -2,7 +2,6 @@ import 'regenerator-runtime'; /* for async await transpile */
 import '../scss/main.scss';
 import '../scss/media.scss';
 import '../scss/loading.scss';
-
 import './components/index';
 import swRegister from './utils/sw-register';
 
