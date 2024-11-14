@@ -54,7 +54,7 @@ const createDetailTemplate = (restaurant) => `
             <form class="postReview__form">
                 <div class="form__group">
                     <label for="inputName">Nama Anda</label>
-                    <input id="inputName" class="form__control" type="text" minlength=5 placeholder="Masukkan Nama Anda" required/>
+                    <input id="inputName" class="form__control" type="text" minlength=2 placeholder="Masukkan Nama Anda" required/>
                 </div>
                 <div class="form__group">
                     <label for="inputReview">Review Anda</label>
