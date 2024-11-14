@@ -5,7 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: path.resolve(__dirname, 'src/scripts/index.js'),
+    app: path.resolve(__dirname,'src/scripts/index.js'),
   },
   output: {
     filename: '[name].bundle.js',
@@ -42,9 +42,10 @@ module.exports = {
       ],
     }),
   ],
-  performance: {
-    hints: false,
-    maxEntrypointSize: 512000,
-    maxAssetSize: 512000
-  },
+  // jika tidak tahu code splitting
+  // performance: {
+  //   hints: false,
+  //   maxEntrypointSize: 512000,
+  //   maxAssetSize: 512000
+  // },
 };
