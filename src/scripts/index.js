@@ -6,26 +6,28 @@ import './components/index';
 import swRegister from './utils/sw-register';
 
 
-const { default: appClass } = await import('./views/app');
+import('./views/app')
+  .then(({ default: appClass }) => {
 
-const app = new appClass({
-  button: document.getElementById('hamburger'),
-  drawer: document.querySelector('#drawer'),
-  content: document.querySelector('#mainContent')
-});
+    const app = new appClass({
+      button: document.getElementById('hamburger'),
+      drawer: document.querySelector('#drawer'),
+      content: document.querySelector('#mainContent')
+    });
+
+    window.addEventListener('hashchange', () => {
+      app.renderPage();
+    });
 
 
+    window.addEventListener('load', async () => {
+      app.renderPage();
+      await swRegister();
+      document.querySelector('loading-overlay').classList.add('hide__loading');
+    });
 
-window.addEventListener('hashchange', ()=>{
-  app.renderPage();
-});
 
-
-window.addEventListener('load', async () =>{
-  app.renderPage();
-  await swRegister();
-  document.querySelector('loading-overlay').classList.add('hide__loading');
-});
+  });
 
 const yearElement = document.getElementById('year');
 const date = new Date();
