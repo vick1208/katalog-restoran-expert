@@ -5,10 +5,18 @@ import daStyle from 'eslint-config-dicodingacademy';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
-  { languageOptions: { globals: globals.browser } },
+  { languageOptions: {
+    globals: {
+      ...globals.browser,
+      ...globals.node,
+      ...globals.jest
+    }
+  },
+  },
   pluginJs.configs.recommended,
   daStyle,
   {
-    ignores:['webpack.*.js', '**/node_modules/', '**/dist/']
-  }
+    ignores:['webpack.*.js', '**/node_modules/', '**/dist/'],
+  },
+
 ];
