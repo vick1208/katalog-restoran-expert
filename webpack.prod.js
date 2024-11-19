@@ -40,7 +40,7 @@ module.exports = merge(common, {
       background_color: "#fffafa",
       icons: [
         {
-          src: path.resolve(__dirname,'src/public/favicon/android-chrome-192x192.png'),
+          src: path.resolve(__dirname,'src/public/images/favicon-wb.png'),
           sizes: [96, 128, 192, 256, 384, 512],
           purpose: 'any'
         }
