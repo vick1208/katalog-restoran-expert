@@ -70,13 +70,13 @@ const createDetailTemplate = (restaurant) => `
 
 
 const createFavouriteButtonTemplate = () => `
-    <button aria-label="favourite this restaurant" id="favouriteButton" class="fav">
-        <i class="fa-solid fa-heart" aria-hidden="true"></i>
+    <button aria-label="favorite this restaurant" id="favouriteButton" class="fav">
+        <i class="fa-regular fa-heart" aria-hidden="true"></i>
     </button>
 `;
 const createUnfavouriteButtonTemplate = () => `
-    <button aria-label="unfavourite this restaurant" id="favouriteButton" class="fav">
-        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+    <button aria-label="unfavorite this restaurant" id="favouriteButton" class="fav">
+        <i class="fa-solid fa-heart" aria-hidden="true"></i>
     </button>
 `;
 

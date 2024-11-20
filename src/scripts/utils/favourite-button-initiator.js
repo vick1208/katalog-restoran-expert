@@ -25,7 +25,7 @@ const FavouriteButtonInitiator = {
   },
 
   _renderFavorite() {
-    this._favouriteButtonContainer.innerHTML = createUnfavouriteButtonTemplate();
+    this._favouriteButtonContainer.innerHTML = createFavouriteButtonTemplate();
 
     const favoriteButton = document.querySelector('#favouriteButton');
     favoriteButton.addEventListener('click', async () => {
@@ -35,7 +35,7 @@ const FavouriteButtonInitiator = {
   },
 
   _renderFavorited() {
-    this._favouriteButtonContainer.innerHTML = createFavouriteButtonTemplate();
+    this._favouriteButtonContainer.innerHTML = createUnfavouriteButtonTemplate();
 
     const favoriteButton = document.querySelector('#favouriteButton');
     favoriteButton.addEventListener('click', async () => {
