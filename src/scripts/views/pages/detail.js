@@ -3,6 +3,7 @@ import RestaurantDbSource from '../../data/restaurantdb-source';
 import { createDetailTemplate } from '../templates/template-creators';
 import FavouriteButtonInitiator from '../../utils/favourite-button-initiator';
 import ReviewPostInitiator from '../../utils/review-post-initiator';
+import FavouriteRestaurant from '../../data/favourite-restaurant';
 
 
 
@@ -29,6 +30,7 @@ const Detail = {
 
     FavouriteButtonInitiator.init({
       favouriteButtonContainer: document.querySelector('#favouriteButtonContainer'),
+      favouriteRestaurants: FavouriteRestaurant,
       restaurant:{
         id: restaurant.id,
         name: restaurant.name,
