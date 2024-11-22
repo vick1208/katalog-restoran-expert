@@ -27,9 +27,8 @@ import('./views/app')
     });
 
 
+  })
+  .catch((error) => {
+    console.error(error);
   });
 
-// const yearElement = document.getElementById('year');
-// const date = new Date();
-
-// yearElement.innerText = date.getFullYear();
