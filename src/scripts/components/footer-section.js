@@ -1,14 +1,34 @@
-class FooterSection extends HTMLElement{
-  connectedCallback(){
-    this.render();
+import { html, css, LitElement } from 'lit';
+
+
+const date = new Date();
+
+class FooterSection extends LitElement{
+
+
+  static styles = css `
+    .footer__content {
+      text-align: center;
+      color: #fafafa;
+    }
+  `;
+
+  static properties = {
+    year:{},
+  };
+
+  constructor(){
+    super();
+    this.year = date.getFullYear();
   }
 
+
   render(){
-    this.innerHTML = `
-        <p class="footer__content">
-            Copyright &copy; <span id="year">date</span> - Bon Appétit
-        </p>
-        `;
+    return html `
+    <p class="footer__content">
+            Copyright &copy; ${this.year} - Bon Appétit
+    </p>
+    `;
   }
 }
 

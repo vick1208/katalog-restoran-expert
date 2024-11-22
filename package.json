@@ -50,6 +50,7 @@
     "imagemin": "^9.0.0",
     "imagemin-mozjpeg": "^10.0.0",
     "imagemin-pngquant": "^10.0.0",
+    "lit": "^3.2.1",
     "regenerator-runtime": "^0.14.0",
     "workbox-precaching": "^7.3.0",
     "workbox-routing": "^7.3.0",

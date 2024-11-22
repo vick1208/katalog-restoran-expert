@@ -29,7 +29,7 @@ import('./views/app')
 
   });
 
-const yearElement = document.getElementById('year');
-const date = new Date();
+// const yearElement = document.getElementById('year');
+// const date = new Date();
 
-yearElement.innerText = date.getFullYear();
+// yearElement.innerText = date.getFullYear();

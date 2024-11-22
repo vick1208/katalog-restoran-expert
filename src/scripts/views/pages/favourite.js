@@ -1,11 +1,12 @@
 import FavouriteRestaurant from '../../data/favourite-restaurant';
 import { createItemsTemplate } from '../templates/template-creators';
+import FavoriteRestoView from './liked-resto/favorite-resto-view';
+
+const view = new FavoriteRestoView();
 
 const Favourite = {
   async render(){
-    return `
-    <favorite-restaurant></favorite-restaurant>
-    `;
+    return view.getDisplayTemplate() ;
   },
 
   async afterRender(){

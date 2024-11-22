@@ -1,9 +1,7 @@
 class FavoriteRestoView{
-  getTemplate(){
+  getDisplayTemplate(){
     return `
-    <div class="content__search">
-        
-    </div>
+      <favorite-restaurant></favorite-restaurant>
     `;
   }
 }
