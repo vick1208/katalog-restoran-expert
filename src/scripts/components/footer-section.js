@@ -1,8 +1,5 @@
 import { html, css, LitElement } from 'lit';
 
-
-const date = new Date();
-
 class FooterSection extends LitElement{
 
 
@@ -19,11 +16,15 @@ class FooterSection extends LitElement{
 
   constructor(){
     super();
-    this.year = date.getFullYear();
+    this.year = 2000;
   }
 
 
   render(){
+
+    const date = new Date();
+    this.year = date.getFullYear();
+
     return html `
     <p class="footer__content">
             Copyright &copy; ${this.year} - Bon Appétit
