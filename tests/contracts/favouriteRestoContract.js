@@ -54,7 +54,7 @@ const itActsAsFavRestoModel = (favResto) => {
       },
     ]);
   });
-  it('should remove favourite restaurant', async () => {
+  it('should handle remove favourite restaurant although the restaurant has not been added', async () => {
     favResto.putRestaurant({ id: 1 });
     favResto.putRestaurant({ id: 2 });
     favResto.putRestaurant({ id: 3 });

@@ -29,15 +29,15 @@ const FavouriteRestaurant = {
   async deleteRestaurant(id){
     return (await dbPromise).delete(OBJECT_STORE_NAME, id);
   },
-  async findRestaurant(query){
+  async searchRestaurants(query){
     return (await this.getAllRestaurants()).filter((restaurant) =>{
       const restaurantTitle = (restaurant.name || '-').toLowerCase();
-      const spacelessRestaurantTitle = restaurantTitle.replace(/\s/g, '');
+      const concatRestaurantTitle = restaurantTitle.replace(/\s/g, '');
 
       const searchQuery = query.toLowerCase();
-      const spacelessQuery = searchQuery.replace(/\s/g, '');
+      const concatQuery = searchQuery.replace(/\s/g, '');
 
-      return spacelessRestaurantTitle.indexOf(spacelessQuery) !== -1;
+      return concatRestaurantTitle.indexOf(concatQuery) !== -1;
 
     });
   }
