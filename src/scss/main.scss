@@ -129,6 +129,14 @@ body {
 	padding: 32px;
 }
 
+.visible__items{
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.notFound_items{
+	grid-template-columns: 1fr;
+}
+
 .page__not-found{
 	width: 100%;
 	height: calc(34px * 12);

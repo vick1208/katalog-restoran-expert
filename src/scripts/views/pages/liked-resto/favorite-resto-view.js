@@ -3,14 +3,20 @@ import { createItemsTemplate } from '../../templates/template-creators';
 class FavoriteRestoView{
   getTemplate(){
     return `
-      <div class="mainContent__title">
+     <div class="mainContent__title">
         <h2>Your Favorite Restaurant List</h2>
       </div>
       <div class="inputSearch">
         <input id="queryResto" type="search"/>
       </div>
       <div id="restaurants" class="restaurants">
-      </div>
+      </div> 
+    `;
+  }
+
+  getViewTemplate(){
+    return `
+    <favorite-restaurant></favorite-restaurant>
     `;
   }
 
@@ -22,14 +28,19 @@ class FavoriteRestoView{
 
   showFavoriteRestaurants(restaurants){
     let html;
+    const restoContainer = document.getElementById('restaurants');
     if (restaurants.length) {
       html = restaurants.reduce((carry, resto) => carry.concat(createItemsTemplate(resto)), '');
+      restoContainer.classList.add('visible__items');
+      restoContainer.classList.remove('notFound_items');
     } else {
       html = this._getEmptyRestaurantTemplate();
+      restoContainer.classList.add('notFound_items');
+      restoContainer.classList.remove('visible__items');
     }
 
-    document.getElementById('restaurants').innerHTML = html;
-    document.getElementById('restaurants').dispatchEvent(new Event('resto:updated'));
+    restoContainer.innerHTML = html;
+    restoContainer.dispatchEvent(new Event('resto:updated'));
   }
 
 

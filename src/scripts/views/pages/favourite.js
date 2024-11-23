@@ -23,6 +23,16 @@ const Favourite = {
       console.error(error);
     }
 
+    try {
+      const { default: search } = await import('./liked-resto/favorite-resto-search');
+      new search({
+        view,
+        favoriteRestaurants: FavouriteRestaurant,
+      });
+    } catch (error) {
+      console.error(error);
+    }
+
 
     // const restaurants = await FavouriteRestaurant.getAllRestaurants();
     // const restaurantContainer = document.querySelector('#restaurants');

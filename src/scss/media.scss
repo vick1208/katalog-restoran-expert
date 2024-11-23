@@ -138,6 +138,10 @@ $background-color_1: #1E293B;
 		row-gap: 16px;
 	}
 
+	.notFound_items{
+		grid-template-columns: 1fr;
+	}
+
 	#itemPicture {
 		max-height: 100%;
 	}
@@ -220,6 +224,10 @@ $background-color_1: #1E293B;
 		row-gap: 16px;
 	}
 
+	.notFound_items{
+		grid-template-columns: 1fr;
+	}
+
 	#itemPicture {
 		max-height: 100%;
 	}
@@ -265,6 +273,10 @@ $background-color_1: #1E293B;
 	.restaurants {
 		grid-template-columns: 1fr 1fr 1fr;
 		gap: 16px;
+	}
+
+	.notFound_items{
+		grid-template-columns: 1fr;
 	}
 }
 
