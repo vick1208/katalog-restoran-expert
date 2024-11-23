@@ -3,8 +3,8 @@ import { createItemsTemplate } from '../../templates/template-creators';
 class FavoriteRestoView{
   getTemplate(){
     return `
-     <div class="mainContent__title">
-        <h2>Your Favorite Restaurant List</h2>
+      <div class="mainContent__title">
+        <h2>Favorite Restaurants</h2>
       </div>
       <div class="inputSearch">
         <input id="queryResto" type="search"/>
@@ -31,12 +31,12 @@ class FavoriteRestoView{
     const restoContainer = document.getElementById('restaurants');
     if (restaurants.length) {
       html = restaurants.reduce((carry, resto) => carry.concat(createItemsTemplate(resto)), '');
-      restoContainer.classList.add('visible__items');
-      restoContainer.classList.remove('notFound_items');
+      // restoContainer.classList.add('visible__items');
+      // restoContainer.classList.remove('notFound_items');
     } else {
       html = this._getEmptyRestaurantTemplate();
       restoContainer.classList.add('notFound_items');
-      restoContainer.classList.remove('visible__items');
+      // restoContainer.classList.remove('visible__items');
     }
 
     restoContainer.innerHTML = html;

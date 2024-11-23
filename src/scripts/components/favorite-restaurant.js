@@ -5,10 +5,10 @@ class FavoriteRestaurant extends HTMLElement{
   _render(){
     this.innerHTML = `
     <div class="mainContent__title">
-      <h2>Your Favorite Restaurant List</h2>
+      <h2>Favorite Restaurants</h2>
     </div>
     <div class="inputSearch">
-      <input id="queryResto" type="search"/>
+      <input id="queryResto" class="search-bar__restaurant" type="search" placeholder="Cari Restoranmu"/>
     </div>
     <div id="restaurants" class="restaurants"></div>
     `;

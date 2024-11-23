@@ -216,7 +216,7 @@ $background-color_1: #1E293B;
 
 @media screen and (min-width: 768px) {
 	.restaurants {
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: repeat(2, 1fr);
 		column-gap: 16px;
 		row-gap: 16px;
 	}
@@ -268,7 +268,7 @@ $background-color_1: #1E293B;
 
 @media screen and (min-width: 900px) {
 	.restaurants {
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: repeat(3, 1fr);
 		gap: 16px;
 	}
 

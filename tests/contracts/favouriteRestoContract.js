@@ -1,4 +1,4 @@
-const itActsAsFavRestoModel = (favResto) => {
+const itActsAsFavouriteRestaurantModel = (favResto) => {
   it('should return the added data', async () => {
     favResto.putRestaurant({ id: 1 });
     favResto.putRestaurant({ id: 12 });
@@ -75,4 +75,4 @@ const itActsAsFavRestoModel = (favResto) => {
   });
 };
 
-export default itActsAsFavRestoModel;
+export default itActsAsFavouriteRestaurantModel;

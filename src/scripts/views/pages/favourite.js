@@ -6,7 +6,7 @@ const view = new FavoriteRestoView();
 
 const Favourite = {
   async render(){
-    return view.getTemplate() ;
+    return view.getViewTemplate();
   },
 
   async afterRender(){

@@ -134,13 +134,13 @@ body {
 	row-gap: 13px;
 }
 
-.visible__items{
-	grid-template-columns: repeat(3, 1fr);
-}
+// .visible__items{
+// 	grid-template-columns: repeat(3, 1fr);
+// }
 
-.notFound_items{
-	grid-template-columns: 1fr;
-}
+// .notFound_items{
+// 	grid-template-columns: 1fr;
+// }
 
 .page__not-found{
 	width: 100%;
