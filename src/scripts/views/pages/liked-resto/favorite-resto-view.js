@@ -1,9 +1,16 @@
 import { createItemsTemplate } from '../../templates/template-creators';
 
 class FavoriteRestoView{
-  getDisplayTemplate(){
+  getTemplate(){
     return `
-      <favorite-restaurant></favorite-restaurant>
+      <div class="mainContent__title">
+        <h2>Your Favorite Restaurant List</h2>
+      </div>
+      <div class="inputSearch">
+        <input id="queryResto" type="search"/>
+      </div>
+      <div id="restaurants" class="restaurants">
+      </div>
     `;
   }
 
@@ -15,15 +22,14 @@ class FavoriteRestoView{
 
   showFavoriteRestaurants(restaurants){
     let html;
-    const restoContainer = document.getElementById('restaurants');
     if (restaurants.length) {
       html = restaurants.reduce((carry, resto) => carry.concat(createItemsTemplate(resto)), '');
     } else {
       html = this._getEmptyRestaurantTemplate();
     }
 
-    restoContainer.innerHTML = html;
-    restoContainer.dispatchEvent(new Event('resto:updated'));
+    document.getElementById('restaurants').innerHTML = html;
+    document.getElementById('restaurants').dispatchEvent(new Event('resto:updated'));
   }
 
 

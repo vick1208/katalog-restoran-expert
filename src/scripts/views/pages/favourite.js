@@ -1,4 +1,4 @@
-// import FavouriteRestaurant from '../../data/favourite-restaurant';
+import FavouriteRestaurant from '../../data/favourite-restaurant';
 // import { createItemsTemplate } from '../templates/template-creators';
 import FavoriteRestoView from './liked-resto/favorite-resto-view';
 
@@ -6,12 +6,23 @@ const view = new FavoriteRestoView();
 
 const Favourite = {
   async render(){
-    return view.getDisplayTemplate() ;
+    return view.getTemplate() ;
   },
 
   async afterRender(){
 
     this._hideHero();
+
+    try {
+      const { default: show } = await import('./liked-resto/favorite-resto-show');
+      new show({
+        view,
+        favoriteRestaurants: FavouriteRestaurant,
+      });
+    } catch (error) {
+      console.error(error);
+    }
+
 
     // const restaurants = await FavouriteRestaurant.getAllRestaurants();
     // const restaurantContainer = document.querySelector('#restaurants');
