@@ -4,7 +4,7 @@ class RestaurantList extends HTMLElement{
   }
   _render(){
     this.innerHTML = `
-      <div id="main" class="mainContent">
+      <div id="main" class="mainContent__title">
         <h2>Explore Restaurants</h2>
       </div>
         <div id="restaurants" class="restaurants">
