@@ -8,7 +8,7 @@ class FavoriteRestaurant extends HTMLElement{
       <h2>Favorite Restaurants</h2>
     </div>
     <div class="inputSearch">
-      <input id="queryResto" class="search-bar__restaurant" type="search" placeholder="Cari Restoranmu"/>
+      <input id="queryResto" class="search-bar__restaurant" type="search"/>
     </div>
     <div id="restaurants" class="restaurants"></div>
     `;

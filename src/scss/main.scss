@@ -153,6 +153,19 @@ body {
 	}
 }
 
+.inputSearch{
+	display: flex;
+	justify-content: center;
+	.search-bar__restaurant{
+		width: 30%;
+		min-height: 2rem;
+		border: 3px solid $color_7;
+		border-radius: 10px;
+		font-size: calc(10rem/8);
+	}
+}
+
+
 
 
 .restaurant-item__not__found {
