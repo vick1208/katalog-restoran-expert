@@ -31,12 +31,12 @@ class FavoriteRestoView{
     const restoContainer = document.getElementById('restaurants');
     if (restaurants.length) {
       html = restaurants.reduce((carry, resto) => carry.concat(createItemsTemplate(resto)), '');
-      // restoContainer.classList.add('visible__items');
-      // restoContainer.classList.remove('notFound_items');
+      restoContainer.classList.add('visible__items');
+      restoContainer.classList.remove('notFound_items');
     } else {
       html = this._getEmptyRestaurantTemplate();
       restoContainer.classList.add('notFound_items');
-      // restoContainer.classList.remove('visible__items');
+      restoContainer.classList.remove('visible__items');
     }
 
     restoContainer.innerHTML = html;

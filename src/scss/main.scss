@@ -134,13 +134,9 @@ body {
 	row-gap: 13px;
 }
 
-// .visible__items{
-// 	grid-template-columns: repeat(3, 1fr);
-// }
 
-// .notFound_items{
-// 	grid-template-columns: 1fr;
-// }
+
+
 
 .page__not-found{
 	width: 100%;
@@ -157,8 +153,8 @@ body {
 	display: flex;
 	justify-content: center;
 	.search-bar__restaurant{
-		width: 30%;
-		min-height: 2rem;
+		width: 60%;
+		min-height: calc(30rem/10);
 		border: 3px solid $color_7;
 		border-radius: 10px;
 		font-size: calc(10rem/8);
@@ -186,7 +182,7 @@ body {
 
 }
 
-.item {
+.item-resto {
 	margin: 16px 0;
 	box-shadow: 3px 4px 8px 1px rgba(0, 0, 0, 0.5);
 	width: 100%;

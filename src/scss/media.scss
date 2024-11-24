@@ -225,6 +225,10 @@ $background-color_1: #1E293B;
 		grid-template-columns: 1fr;
 	}
 
+	.visible__items{
+		grid-template-columns: repeat(2, 1fr);
+	}
+
 	#itemPicture {
 		max-height: 100%;
 	}
@@ -269,11 +273,15 @@ $background-color_1: #1E293B;
 @media screen and (min-width: 900px) {
 	.restaurants {
 		grid-template-columns: repeat(3, 1fr);
-		gap: 16px;
+		gap: 20px;
 	}
 
 	.notFound_items{
 		grid-template-columns: 1fr;
+	}
+
+	.visible__items{
+		grid-template-columns: repeat(3, 1fr);
 	}
 }
 
