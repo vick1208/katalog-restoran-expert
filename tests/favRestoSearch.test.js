@@ -47,9 +47,73 @@ describe('Searching restaurants', () => {
     it('should ask the model to search for liked restaurants', () => {
       favoriteRestaurants.searchRestaurants.mockImplementation(() => []);
 
-      searchResto('film a');
+      searchResto('resto a');
 
-      expect(favoriteRestaurants.searchRestaurants).toHaveBeenCalledWith('film a');
+      expect(favoriteRestaurants.searchRestaurants).toHaveBeenCalledWith('resto a');
+    });
+
+    it('should show the restaurants data found', (done) => {
+      document.getElementById('restaurants').addEventListener('resto:updated', () => {
+        expect(document.querySelectorAll('.item-resto').length).toEqual(3);
+
+        done();
+      });
+
+      favoriteRestaurants.searchRestaurants.mockImplementation((query) => {
+        if (query === 'resto a') {
+          return [
+            { id: 111, name: 'resto a' },
+            { id: 222, name: 'ada juga resto abc' },
+            { id: 333, name: 'ini juga ada resto alpabet' },
+          ];
+        }
+
+        return [];
+      });
+
+      searchResto('resto a');
+    });
+
+    it('should show restaurant\'s name found by Favorite Restaurants', (done) => {
+      document.getElementById('restaurants').addEventListener('resto:updated', () => {
+        const restaurantNames = document.querySelectorAll('.restaurant__name');
+        expect(restaurantNames.item(0).textContent).toEqual('resto a');
+        expect(restaurantNames.item(1).textContent).toEqual('ada juga resto abc');
+        expect(restaurantNames.item(2).textContent).toEqual('ini juga ada resto alpabet');
+        done();
+      });
+      favoriteRestaurants.searchRestaurants.mockImplementation((query) => {
+        if (query === 'resto a') {
+          return [
+            { id: 111, name: 'resto a' },
+            { id: 222, name: 'ada juga resto abc' },
+            { id: 333, name: 'ini juga ada resto alpabet' },
+          ];
+        }
+
+        return [];
+      });
+
+      searchResto('resto a');
+    });
+
+    it('should show restaurant name when the restaurant returned does not contain a name', (done) => {
+      document.getElementById('restaurants').addEventListener('resto:updated', () => {
+        const restaurantNames = document.querySelectorAll('.restaurant__name');
+        expect(restaurantNames.item(0).textContent).toEqual('restaurant name');
+
+        done();
+      });
+
+      favoriteRestaurants.searchRestaurants.mockImplementation((query) => {
+        if (query === 'resto a') {
+          return [{ id: 444 }];
+        }
+
+        return [];
+      });
+
+      searchResto('resto a');
     });
   });
 });

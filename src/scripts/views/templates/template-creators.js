@@ -7,7 +7,7 @@ const createItemsTemplate = (restaurant) => `
             </div>
             <p class="itemCity">${restaurant.city}</p>
             <div class="itemDesc">
-                <h2><a href="#/detail/${restaurant.id}">${restaurant.name || 'restaurant name'}</a></h2>
+                <h2 class="restaurant__name"><a href="#/detail/${restaurant.id}">${restaurant.name || 'restaurant name'}</a></h2>
                 <div>
                     <p class="textDesc">${restaurant.description}</p>
                 </div>
