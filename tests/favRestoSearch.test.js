@@ -116,4 +116,52 @@ describe('Searching restaurants', () => {
       searchResto('resto a');
     });
   });
+
+  describe('When query is empty value', () => {
+    it('should capture the query as empty', () => {
+      favoriteRestaurants.getAllRestaurants.mockImplementation(() => []);
+
+      searchResto(' ');
+      expect(presenter.latestQuery.length).toEqual(0);
+      searchResto('   ');
+      expect(presenter.latestQuery.length).toEqual(0);
+      searchResto('');
+      expect(presenter.latestQuery.length).toEqual(0);
+      searchResto('\t');
+      expect(presenter.latestQuery.length).toEqual(0);
+      searchResto('\t\t');
+      expect(presenter.latestQuery.length).toEqual(0);
+
+    });
+    it('should show list of restaurants', () => {
+      favoriteRestaurants.getAllRestaurants.mockImplementation(() => []);
+      searchResto('\t    \t');
+      expect(favoriteRestaurants.getAllRestaurants).toHaveBeenCalledTimes(1);
+    });
+
+
+  });
+
+  describe('When no favorite restaurants found', () => {
+    it('should show the empty message', (done) => {
+      document.getElementById('restaurants').addEventListener('resto:updated', () => {
+        expect(document.querySelectorAll('.restaurant-item__not__found').length).toEqual(1);
+        done();
+      });
+
+      // favoriteRestaurants.searchRestaurants.mockImplementation((query) => []); sama saja dengan mock di bawah
+      favoriteRestaurants.searchRestaurants.mockImplementation(() => []);
+      searchResto('resto a');
+    });
+
+    it('should not show any restaurants', (done) => {
+      document.getElementById('restaurants').addEventListener('resto:updated', () => {
+        expect(document.querySelectorAll('.item-resto').length).toEqual(0);
+        done();
+      });
+
+      favoriteRestaurants.searchRestaurants.mockImplementation(() => []);
+      searchResto('resto a');
+    });
+  });
 });
