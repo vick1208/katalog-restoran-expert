@@ -1,7 +1,7 @@
 import CONFIG from '../../globals/config';
 
 const createItemsTemplate = (restaurant) => `
-    <div class="item">
+    <div class="item-resto">
             <div>
                 <img class="itemPicture" src="${CONFIG.BASE_URL_IMAGES + restaurant.pictureId}" alt="${restaurant.name || 'restaurant picture'}">
             </div>

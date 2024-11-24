@@ -3,10 +3,13 @@ class FavoriteRestoSearch{
     this._favoriteRestaurants = favoriteRestaurants;
     this._view = view;
 
+    this._listenToUserSearch();
   }
 
   _listenToUserSearch(){
-    this._view.runWhenUserIsSearching();
+    this._view.runWhenUserIsSearching((latestQuery) => {
+      this._searchRestaurants(latestQuery);
+    });
   }
 
   async _searchRestaurants(latestQuery){

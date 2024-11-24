@@ -73,6 +73,18 @@ const itActsAsFavouriteRestaurantModel = (favResto) => {
       },
     ]);
   });
+  it('should be able to search restaurants', async () => {
+    favResto.putRestaurant({ id: 1, name: 'resto a' });
+    favResto.putRestaurant({ id: 2, name: 'resto b' });
+    favResto.putRestaurant({ id: 3, name: 'resto ab' });
+    favResto.putRestaurant({ id: 4, name: 'yang ini resto abce' });
+
+    expect(await favResto.searchRestaurants('resto a')).toEqual([
+      { id: 1, name: 'resto a' },
+      { id: 3, name: 'resto ab' },
+      { id: 4, name: 'yang ini resto abce' },
+    ]);
+  });
 };
 
 export default itActsAsFavouriteRestaurantModel;
