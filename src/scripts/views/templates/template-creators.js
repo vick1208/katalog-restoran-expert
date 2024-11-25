@@ -17,7 +17,7 @@ const createItemsTemplate = (restaurant) => `
 `;
 
 const createDetailTemplate = (restaurant) => `
-    <h2 class="detail__title">Informasi ${restaurant.name}</h2>
+    <h2 class="detail__title">${restaurant.name}</h2>
     <div class="restaurant__detail">
         <div class="detail__header">
             <img src="${CONFIG.BASE_URL_IMAGES + restaurant.pictureId}" alt="${restaurant.name}"/>
