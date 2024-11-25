@@ -60,8 +60,8 @@ Scenario('add a review', async ({ I }) => {
     I.waitForElement('#inputName', 10);
     I.waitForElement('#inputReview',10);
 
-    const nameReview = 'Ahmad Putra Armandy ';
-    const reviewText = 'Tempat sangat nyaman dan cukup luas.';
+    const nameReview = 'Ahmad Putra Waluyo';
+    const reviewText = 'Tempat sangat nyaman dan cukup luas meski pelayan kurang ramah.';
 
     I.fillField('#inputName', nameReview);
     I.fillField('#inputReview', reviewText);
@@ -73,7 +73,7 @@ Scenario('add a review', async ({ I }) => {
     I.waitForElement('.review__card',10);
 
     const latestName = await I.grabTextFrom(locate('.review__card .review__sender span').last());
-    const latestReview = await I.grabTextFrom(locate('.review__card .review__text span').last());
+    const latestReview = await I.grabTextFrom(locate('.review__card .review__text').last());
 
     assert.strictEqual(nameReview,latestName);
     assert.strictEqual(reviewText,latestReview);
