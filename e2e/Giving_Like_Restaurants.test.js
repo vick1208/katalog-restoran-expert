@@ -33,29 +33,28 @@ Scenario('give a like to a restaurant', async ({ I }) => {
     assert.strictEqual(firstRestoName, favoritedRestoName);
 });
 
-Scenario('searching favorite restaurant', async ({ I }) => {
+Scenario('searching not existed restaurant', async ({ I }) => {
     I.see('Daftar Restoran Tidak Ditemukan', '.restaurant-item__not__found');
+
     I.amOnPage('/');
 
-    I.seeElement('.restaurant__name a');
+    I.waitForElement('.restaurant__name a',10);
 
-    const titles = [];
-    for(let i = 1 ; i <= 3 ; i++){
+    const restoTitles = [];
+
+    for(let i = 1; i <= 3; i++){
         I.click(locate('.restaurant__name a').at(i));
-
         I.seeElement('#favouriteButton');
         I.click('#favouriteButton');
-
-        titles.push(await I.grabTextFrom('.detail__title'));
-
+        restoTitles.push(await I.grabTextFrom('.detail__title'));
         I.amOnPage('/');
     }
 
     I.amOnPage('/#/favorite');
-    I.waitForElement('#queryResto', 10);
+    I.seeElement('#queryResto');
 
+    I.fillField('#queryResto','tidak ada restaurant');
+    I.pressKey('Enter');
 
-    const visibleLikedResto = await I.grabNumberOfVisibleElements('.item-resto');
-    assert.strictEqual(titles.length, visibleLikedResto);
-
+    I.see('Daftar Restoran Tidak Ditemukan', '.restaurant-item__not__found');
 });
