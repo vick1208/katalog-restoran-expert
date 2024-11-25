@@ -27,8 +27,8 @@ const ReviewPostInitiator = {
     getReview.forEach((item) => {
       reviewPost.innerHTML += `
             <div class="review__card">
-                <h2 class="review__title">${item.review}</h2>
-                <p class="review__sender">By ${item.name}</p>
+                <h2 class="review__text"><span>${item.review}</span></h2>
+                <p class="review__sender">By <span>${item.name}</span> </p>
                 <p class="review__date">${item.date}</p>
             </div>
             `;

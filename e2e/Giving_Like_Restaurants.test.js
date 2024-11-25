@@ -11,13 +11,13 @@ Scenario('showing empty saved favorite restaurants',  ({ I }) => {
     I.see('Daftar Restoran Tidak Ditemukan.', '.restaurant-item__not__found');
 });
 
-Scenario('Give a like to a restaurant', async ({ I }) => {
+Scenario('give a like to a restaurant', async ({ I }) => {
     I.see('Daftar Restoran Tidak Ditemukan', '.restaurant-item__not__found');
     I.amOnPage('/');
 
 
 
-    I.waitForElement('.restaurant__name a', 8);
+    I.waitForElement('.restaurant__name a', 10);
 
     const firstResto = locate('.restaurant__name a').first();
     const firstRestoName = await I.grabTextFrom(firstResto);

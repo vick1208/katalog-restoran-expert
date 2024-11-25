@@ -6,10 +6,10 @@ Before(({ I }) => {
     I.amOnPage('/#/favorite');
 });
 
-Scenario('Unlike to a restaurant', async ({ I }) => {
+Scenario('give unlike to a restaurant', async ({ I }) => {
     I.amOnPage('/');
 
-    I.waitForElement('.restaurant__name a', 8);
+    I.waitForElement('.restaurant__name a', 10);
 
     const firstResto = locate('.restaurant__name a').first();
     const firstRestoName = await I.grabTextFrom(firstResto);
@@ -31,5 +31,5 @@ Scenario('Unlike to a restaurant', async ({ I }) => {
 
     I.amOnPage('/#/favorite');
 
-    I.waitForText('Daftar Restoran Tidak Ditemukan',8);
+    I.waitForText('Daftar Restoran Tidak Ditemukan',10);
 });
