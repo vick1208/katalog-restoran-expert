@@ -10,7 +10,8 @@
     "lint": "eslint ./src ./tests",
     "lint:fix": "eslint --fix ./src ./tests",
     "test": "jest",
-    "test:watch": "jest --watchAll"
+    "test:watch": "jest --watchAll",
+    "codeceptjs": "codeceptjs run --steps"
   },
   "keywords": [],
   "author": "vicky <vickyhuang808@gmail.com>",
@@ -24,6 +25,7 @@
     "babel-jest": "^29.6.1",
     "babel-loader": "^8.2.5",
     "clean-webpack-plugin": "^4.0.0",
+    "codeceptjs": "^3.6.7",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.8.1",
     "eslint": "^9.14.0",
@@ -35,6 +37,7 @@
     "http-server": "^14.1.1",
     "jest": "^29.6.1",
     "jest-environment-jsdom": "^29.6.1",
+    "playwright": "^1.49.0",
     "sass": "^1.80.3",
     "sass-loader": "^16.0.2",
     "style-loader": "^3.3.1",
@@ -46,14 +49,12 @@
     "workbox-webpack-plugin": "^7.3.0"
   },
   "dependencies": {
-    "codeceptjs": "^3.6.7",
     "idb": "^8.0.0",
     "image-minimizer-webpack-plugin": "^4.1.0",
     "imagemin": "^9.0.0",
     "imagemin-mozjpeg": "^10.0.0",
     "imagemin-pngquant": "^10.0.0",
     "lit": "^3.2.1",
-    "playwright": "^1.49.0",
     "regenerator-runtime": "^0.14.0",
     "workbox-precaching": "^7.3.0",
     "workbox-routing": "^7.3.0",

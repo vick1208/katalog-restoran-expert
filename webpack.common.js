@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 // pindahkan workbox webpack plugin jika ingin melihat keadaan watch mode
-// const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
+const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 
 
 module.exports = {
@@ -47,11 +47,11 @@ module.exports = {
     }),
     new CleanWebpackPlugin(),
 
-    // --watch mode
-    // new WorkboxWebpackPlugin.InjectManifest({
-    //   swSrc: path.resolve(__dirname, "src/scripts/sw.js"),
-    //   swDest: "./sw.bundle.js"
-    // }),
+    // watch mode
+    new WorkboxWebpackPlugin.InjectManifest({
+      swSrc: path.resolve(__dirname, "src/scripts/sw.js"),
+      swDest: "./sw.bundle.js"
+    }),
   ],
   // jika tidak tahu code splitting
   // performance: {

@@ -1,21 +1,13 @@
 const assert = require('assert');
 
-Feature('Giving Like Restaurants');
+Feature('Giving Unlike Restaurants');
 
 Before(({ I }) => {
     I.amOnPage('/#/favorite');
-}); 
-
-Scenario('showing empty saved favorite restaurants',  ({ I }) => {
-    I.seeElement('#queryResto');
-    I.see('Daftar Restoran Tidak Ditemukan.', '.restaurant-item__not__found');
 });
 
-Scenario('Give a like to a restaurant', async ({ I }) => {
-    I.see('Daftar Restoran Tidak Ditemukan', '.restaurant-item__not__found');
+Scenario('Unlike to a restaurant', async ({ I }) => {
     I.amOnPage('/');
-
-
 
     I.waitForElement('.restaurant__name a', 8);
 
@@ -27,8 +19,17 @@ Scenario('Give a like to a restaurant', async ({ I }) => {
     I.click('#favouriteButton');
 
     I.amOnPage('/#/favorite');
-    I.seeElement('.item-resto');
+    I.seeElement('.item-resto'); 
     const favoritedRestoName = await I.grabTextFrom('.restaurant__name');
 
     assert.strictEqual(firstRestoName, favoritedRestoName);
+
+    I.click(firstResto);
+
+    I.seeElement('#favouriteButton');
+    I.click('#favouriteButton');
+
+    I.amOnPage('/#/favorite');
+
+    I.waitForText('Daftar Restoran Tidak Ditemukan',8);
 });
