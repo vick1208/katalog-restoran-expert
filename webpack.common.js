@@ -5,7 +5,9 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 // pindahkan workbox webpack plugin ke sini jika ingin dilakukan pada semua mode
 // const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+const devMode = process.env.NODE_ENV !== 'production';
 
 
 module.exports = {
@@ -19,21 +21,14 @@ module.exports = {
   },
   module: {
     rules: [
-      // {
-      //   test: /\.s[ac]ss$/i,
-      //   use: [
-      //     'style-loader',
-      //     'css-loader',
-      //     'sass-loader'
-      //   ]
-
-      // },
       {
-        test: /\.css$/,
+        test: /\.(sa|sc|c)ss$/i,
         use: [
-          'style-loader',
+          devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader',
+          'sass-loader'
         ]
+
       },
     ],
   },
@@ -41,10 +36,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: path.resolve(__dirname, 'src/templates/index.html'),
-      inject: 'body',
-      minify: {
+      minify:{
         minifyCSS: true,
         minifyJS: true,
+        minifyURLs: true
       }
     }),
     
@@ -54,7 +49,7 @@ module.exports = {
           from: path.resolve(__dirname, 'src/public/'),
           to: path.resolve(__dirname, 'dist/'),
           globOptions: {
-            ignore: ['**/images/heros/*.jpg'],
+            ignore: ['**/images/heros/**'],
           }
         },
       ],
@@ -70,5 +65,9 @@ module.exports = {
     //   swSrc: path.resolve(__dirname, "src/scripts/sw.js"),
     //   swDest: "./sw.bundle.js"
     // }),
-  ],
+  ].concat(devMode ? [] : [
+    new MiniCssExtractPlugin({
+      filename: '[name].bundle.css'
+    }),
+  ]),
 };

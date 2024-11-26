@@ -1,10 +1,10 @@
 import 'regenerator-runtime'; /* for async await transpile */
-// import '../styles/scss/main.scss';
-// import '../styles/scss/media.scss';
-// import '../styles/scss/loading.scss';
-import '../styles/main.css';
-import '../styles/media.css';
-import '../styles/loading.css';
+import '../styles/scss/main.scss';
+import '../styles/scss/media.scss';
+import '../styles/scss/loading.scss';
+// import '../styles/main.css';
+// import '../styles/media.css';
+// import '../styles/loading.css';
 import './components/index';
 import 'lazysizes';
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
