@@ -3,6 +3,9 @@ import '../scss/main.scss';
 import '../scss/media.scss';
 import '../scss/loading.scss';
 import './components/index';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
+
 import swRegister from './utils/sw-register';
 
 

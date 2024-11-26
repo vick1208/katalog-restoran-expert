@@ -2,7 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-// pindahkan workbox webpack plugin jika ingin melihat keadaan watch mode
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+// pindahkan workbox webpack plugin ke sini jika ingin dilakukan pada semua mode
 // const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 
 
@@ -40,14 +41,19 @@ module.exports = {
           from: path.resolve(__dirname, 'src/public/'),
           to: path.resolve(__dirname, 'dist/'),
           globOptions: {
-            ignore: ['**/images/heros/hero-image_1.jpg'],
+            ignore: ['**/images/heros/*.jpg'],
           }
         },
       ],
     }),
     new CleanWebpackPlugin(),
+    
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+      openAnalyzer: false
+    })
 
-    // watch mode
+    // all mode
     // new WorkboxWebpackPlugin.InjectManifest({
     //   swSrc: path.resolve(__dirname, "src/scripts/sw.js"),
     //   swDest: "./sw.bundle.js"

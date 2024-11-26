@@ -4,6 +4,7 @@ const path = require('path');
 const ImageMinimizerWebpackPlugin = require('image-minimizer-webpack-plugin');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 
+
 module.exports = merge(common, {
   mode: 'production',
   devtool: 'source-map',
@@ -28,6 +29,7 @@ module.exports = merge(common, {
       swSrc: path.resolve(__dirname, "src/scripts/sw.js"),
       swDest: "./sw.bundle.js"
     }),
+    
   ],
   optimization: {
     minimizer: [

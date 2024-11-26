@@ -19,13 +19,20 @@ $background-color_1: #1E293B;
 		font-size: calc(3rem/4);
 	}
 
-	.hero__title {
-		font-size: calc(3rem - 1rem);
-	}
+	
 
-	.hero__tag {
-		font-size: calc(1rem + 4px);
-		margin: 15px;
+	.hero__container{
+		background: linear-gradient(90deg, rgba(1, 1, 1, 0.8) 20%, rgba(27, 18, 18, 0.5) 80%), url('../public/images/heros/hero-image_1-small.jpg');
+		background-size: cover;
+
+		.hero__title {
+			font-size: calc(3rem - 1rem);
+		}
+	
+		.hero__tag {
+			font-size: calc(1rem + 4px);
+			margin: 15px;
+		}
 	}
 
 	.mainContent {
