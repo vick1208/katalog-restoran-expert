@@ -36,11 +36,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: path.resolve(__dirname, 'src/templates/index.html'),
-      minify:{
-        minifyCSS: true,
-        minifyJS: true,
-        minifyURLs: true
-      }
     }),
     
     new CopyWebpackPlugin({
@@ -49,7 +44,7 @@ module.exports = {
           from: path.resolve(__dirname, 'src/public/'),
           to: path.resolve(__dirname, 'dist/'),
           globOptions: {
-            ignore: ['**/images/heros/**'],
+            ignore: ['**/images/heros/**','**/images/svg/**'],
           }
         },
       ],
@@ -59,12 +54,7 @@ module.exports = {
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
       openAnalyzer: false
-    })
-    // all mode
-    // new WorkboxWebpackPlugin.InjectManifest({
-    //   swSrc: path.resolve(__dirname, "src/scripts/sw.js"),
-    //   swDest: "./sw.bundle.js"
-    // }),
+    }),
   ].concat(devMode ? [] : [
     new MiniCssExtractPlugin({
       filename: '[name].bundle.css'
