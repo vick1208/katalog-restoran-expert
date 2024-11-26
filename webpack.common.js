@@ -7,6 +7,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 // const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 
 
+
 module.exports = {
   entry: {
     app: path.resolve(__dirname, 'src/scripts/index.js'),
@@ -33,6 +34,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: path.resolve(__dirname, 'src/templates/index.html'),
+      inject: 'body',
+      minify: {
+        minifyCSS: true,
+        minifyJS: true,
+      }
     }),
     
     new CopyWebpackPlugin({
@@ -52,7 +58,6 @@ module.exports = {
       analyzerMode: 'static',
       openAnalyzer: false
     })
-
     // all mode
     // new WorkboxWebpackPlugin.InjectManifest({
     //   swSrc: path.resolve(__dirname, "src/scripts/sw.js"),

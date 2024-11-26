@@ -3,6 +3,7 @@ const common = require('./webpack.common');
 const path = require('path');
 const ImageMinimizerWebpackPlugin = require('image-minimizer-webpack-plugin');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 
 module.exports = merge(common, {
@@ -22,6 +23,13 @@ module.exports = merge(common, {
           },
         ],
       },
+      {
+        test: /\.css$/,
+        use:[
+          MiniCssExtractPlugin.loader,
+          'css-loader'
+        ]
+      }
     ],
   },
   plugins: [
@@ -29,7 +37,9 @@ module.exports = merge(common, {
       swSrc: path.resolve(__dirname, "src/scripts/sw.js"),
       swDest: "./sw.bundle.js"
     }),
-    
+    new MiniCssExtractPlugin({
+      filename: 'app.bundle.css'
+    }),
   ],
   optimization: {
     minimizer: [
